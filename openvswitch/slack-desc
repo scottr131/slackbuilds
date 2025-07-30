@@ -1,0 +1,11 @@
+openvswitch: Open vSwitch (multilayer software network switch)
+openvswitch:
+openvswitch: Open vSwitch is a multilayer software switch licensed under the open
+openvswitch: source Apache 2 license.  Our goal is to implement a production
+openvswitch: quality switch platform that supports standard management interfaces
+openvswitch: and opens the forwarding functions to programmatic extension and
+openvswitch: control.
+openvswitch:
+openvswitch: Open vSwitch is well suited to function as a virtual switch in VM
+openvswitch: environments.  Open vSwitch supports multiple Linux-based
+openvswitch: virtualization technologies including KVM, and VirtualBox.
