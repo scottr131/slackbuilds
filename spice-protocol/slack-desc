@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.
+# Line up the first '|' above the ':' following the base package name, and
+# the '|' on the right side marks the last column you can put a character in.
+# You must make exactly 11 lines for the formatting to be correct.  It's also
+# customary to leave one space after the ':' except on otherwise blank lines.
+
+              |-----handy-ruler------------------------------------------------------|
+spice-protocol: spice-protocol (The protocol definition for SPICE)
+spice-protocol:
+spice-protocol:The protocol definition for [SPICE] project used by:
+spice-protocol:* [spice-server]: A server side library used by [QEMU] and [x11spice];
+spice-protocol:* [spice-gtk]: A client side library used by [virt-viewer and 
+spice-protocol:  virt-manager] and [GNOME Boxes];
+spice-protocol:* [linux/vd-agent] and [win32/vd-agent]: Guest components for Linux
+spice-protocol:  and Windows
+spice-protocol:* [xf86-video-qxl], [gpu/drm/qxl], [win32/qxl],
+spice-protocol:  [win32/qxl-wddm-dod]: Guest video drivers;
+spice-protocol:
