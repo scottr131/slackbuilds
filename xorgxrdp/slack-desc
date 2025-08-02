@@ -1,0 +1,11 @@
+xorgxrdp: xorgxrdp (modules for use with X.org and xrdp)
+xorgxrdp:
+xorgxrdp: **xorgxrdp** is a collection of modules to be used with a pre-
+xorgxrdp: existing X.org install to make the X server act like X11rdp. Unlike 
+xorgxrdp: X11rdp, you don't have to recompile the whole X Window System.
+xordxrdp: Instead, additional modules are installed to a location where the
+xordxrdp: existing Xorg installation would pick them.
+xorgxrdp:
+xorgxrdp: xorgxrdp is to be used together with [xrdp]
+xorgxrdp:   (https://github.com/neutrinolabs/xrdp)
+xorgxrdp: and X.Org Server. It is pretty useless using xorgxrdp alone.

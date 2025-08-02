@@ -1,0 +1,11 @@
+xrdp: xrd (an open source RDP server)
+xrdp:
+xrdp: **xrdp** provides a graphical login to remote machines using Microsoft
+xrdp: Remote Desktop Protocol (RDP). xrdp accepts connections from a variety of RDP clients:
+xrdp:   * FreeRDP
+xrdp:   * rdesktop
+xrdp:   * KRDC
+xrdp:   * NeutrinoRDP
+xrdp:   * Windows MSTSC (Microsoft Terminal Services Client, aka `mstsc.exe`)
+xrdp:   * Microsoft Remote Desktop (found on Microsoft Store, which is distinct from MSTSC)
+xrdp:
