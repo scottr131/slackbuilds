@@ -1,0 +1,11 @@
+drbd: DRBD (networked RAID 1 functionality for GNU/Linux)
+drbd:
+drbd: DRBD, developed by [LINBIT](https://www.linbit.com), provides 
+drbd: networked RAID 1 functionality for GNU/Linux. It is designed for high
+drbd: availability clusters and software defined storage. DRBD keeps disks
+drbd: on multiple nodes synchronized using TCP/IP or RDMA and makes the 
+drbd: data available as a block device. This results in RAID 1 but without
+drbd: the use of uncommon hardware such as shared SCSI buses or Fibre
+drbd: Channel.
+drbd:
+drbd:
