@@ -1,0 +1,11 @@
+libvirt-python: libvirt-python (libvirt module for the Python language)
+libvirt-python:
+libvirt-python: This package provides a module that permits applications
+libvirt-python: written in the Python 3.x programming language to call the interface
+libvirt-python: supplied by the libvirt library, to manage the virtualization
+libvirt-python: capabilities of recent versions of Linux (and other OSes).
+libvirt-python: As such, the module exposes Python bindings to to the libvirt.so,
+libvirt-python: libvirt-qemu.so and libvirt-lxc.so library APIs.
+libvirt-python:
+libvirt-python:
+libvirt-python:
