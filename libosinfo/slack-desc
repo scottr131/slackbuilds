@@ -1,0 +1,11 @@
+libosinfo: libosinfo (a library API for managing information about OSs)
+libosinfo:
+libosinfo: libosinfo is a GObject based library API for managing information
+libosinfo: about operating systems, hypervisors and the (virtual) hardware
+libosinfo: devices they can support. It includes a database containing device
+libosinfo: metadata and provides APIs to match/identify optimal devices for
+libosinfo: deploying an operating system on a hypervisor. Via the magic of
+libosinfo: GObject Introspection, the API is available in all common 
+libosinfo: programming languages with demos for javascript (GJS/Seed) and
+libosinfo: python (PyGObject). Vala bindings are also provided.
+libosinfo:
