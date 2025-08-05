@@ -1,0 +1,11 @@
+numactl: numactl (simple NUMA policy support, libnuma)
+numactl:
+numactl: Simple NUMA policy support. It consists of a numactl program to run
+numactl: other programs with a specific NUMA policy and a libnuma shared
+numactl: library ("NUMA API") to set NUMA policy in applications.
+numactl:
+numactl:
+numactl:
+numactl:
+numactl:
+numactl:
