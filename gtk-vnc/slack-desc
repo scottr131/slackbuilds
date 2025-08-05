@@ -1,0 +1,11 @@
+gtk-vnc: gtk-vnc (client side APIs for RFB protocol / VNC)
+gtk-vnc:
+gtk-vnc: gtk-vnc is a project providing client side APIs for the
+gtk-vnc: RFB protocol / VNC remote desktop technology.
+gtk-vnc: 
+gtk-vnc: It is built using coroutines allowing it to be completely
+gtk-vnc: asynchronous while remaining single threaded. It provides
+gtk-vnc: two core C libraries, libgvnc for interacting with the core
+gtk-vnc: RFB protocol and libgtk-vnc for a GTK display widget.
+gtk-vnc: 
+gtk-vnc: 
