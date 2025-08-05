@@ -1,0 +1,11 @@
+swtpm: swtpm (a software TPM emulator)
+swtpm: 
+swtpm: The SWTPM package provides TPM emulators with different front-end 
+swtpm: interfaces to libtpms. TPM emulators provide socket interfaces (TCP/IP
+swtpm: and Unix) and the Linux CUSE interface for the creation of multiple 
+swtpm: native /dev/vtpm* devices.
+swtpm:
+swtpm: The SWTPM package also provides several tools for using the TPM 
+swtpm: emulator, creating certificates for a TPM, and simulating the
+swtpm: manufacturing of a TPM by creating a TPM's EK and platform 
+swtpm: certificates etc.
