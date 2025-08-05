@@ -1,0 +1,11 @@
+virt-manager: virt-manager (a graphical tool for managing virtual machines)
+virt-manager:
+virt-manager: `virt-manager` is a graphical tool for managing virtual machines
+virt-manager: via [libvirt](https://libvirt.org). Most usage is with QEMU/KVM
+virt-manager: virtual machines, but Xen and libvirt LXC containers are well
+virt-manager: supported. Common operations for any libvirt driver should work.
+virt-manager:
+virt-manager:
+virt-manager:
+virt-manager:
+virt-manager:
