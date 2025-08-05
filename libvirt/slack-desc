@@ -1,0 +1,11 @@
+libvirt: libvirt (a C API for managing virtualization technologies)
+libvirt:
+libvirt: Libvirt provides a portable, long term stable C API for managing the
+libvirt: virtualization technologies provided by many operating systems. It
+libvirt: includes support for QEMU, KVM, Xen, LXC, bhyve, Virtuozzo, VMware
+libvirt: vCenter and ESX, VMware Desktop, Hyper-V, VirtualBox and the POWER
+libvirt: Hypervisor.
+libvirt:
+libvirt:
+libvirt:
+libvirt:
