@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Slackware build script for zfs
+# Slackware build script for drbd-utils
 
 # Copyright 2025 insane131 
 # All rights reserved.
@@ -24,8 +24,8 @@
 
 cd $(dirname $0) ; CWD=$(pwd)
 
-PRGNAM=zfs
-VERSION=2.3.3
+PRGNAM=drbd-utils
+VERSION=9.31.0
 BUILD=1
 TAG=${TAG:-_SBo}		# the "_SBo" is required
 PKGTYPE=${PKGTYPE:-tgz}
@@ -94,7 +94,7 @@ CXXFLAGS="$SLKCFLAGS" \
   --mandir=/usr/man \
   --docdir=/usr/doc/$PRGNAM-$VERSION \
   --disable-static \
-  --build=$ARCH-slackware-linux --without-python
+  --build=$ARCH-slackware-linux 
 
 make -j ${BLDTHREADS:-1}
 make install DESTDIR=$PKG
