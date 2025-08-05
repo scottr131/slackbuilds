@@ -1,0 +1,10 @@
+qemu: qemu (generic machine and userspace emulator and virtualizer)
+qemu: 
+qemu: QEMU is a generic and open source machine & userspace emulator and
+qemu: virtualizer.
+qemu: 
+qemu: QEMU is capable of emulating a complete machine in software without
+qemu: any need for hardware virtualization support. By using dynamic
+qemu: translation, it achieves very good performance. QEMU can also
+qemu: integrate with the Xen and KVM hypervisors to provide emulated
+qemu: hardware while allowing the hypervisor to manage the CPU. 
