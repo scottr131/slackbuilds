@@ -1,0 +1,11 @@
+osinfo-db-tools: osinfo-db-tools (a set of tools for libosinfo)
+osinfo-db-tools:
+osinfo-db-tools: libosinfo is a project providing information about operating systems,
+osinfo-db-tools: hypervisors and the (virtual) hardware devices they can support.
+osinfo-db-tools:
+osinfo-db-tools: This package contains a set of tools to assist administrators and
+osinfo-db-tools: developers in managing the database.
+osinfo-db-tools:
+osinfo-db-tools: osinfo-db-tools is Free Software and licenced under GPLv2+.
+osinfo-db-tools:
+osinfo-db-tools:

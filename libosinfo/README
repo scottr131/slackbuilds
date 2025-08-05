@@ -1,0 +1,4 @@
+This seems to have a problem with libxml2
+I was able to get it to compile by installing 2.13.5 over top of 2.14.5, build
+it, and then install 2.14.5 back. This is probably not the right way to solve
+this.
