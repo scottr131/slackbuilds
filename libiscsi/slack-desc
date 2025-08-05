@@ -1,0 +1,11 @@
+libiscsi: libiscsi: (client-side library to implement the iSCSI protocol)
+libiscsi:
+libiscsi: Libiscsi is a client-side library to implement the iSCSI protocol
+libiscsi: that can be used to access the resources of an iSCSI target.
+libiscsi:
+libiscsi: The library is fully asynchronous with regards to iSCSI commands and
+libiscsi: SCSI tasks, but a synchronous layer is also provided for ease of use
+libiscsi: for simpler applications.
+libiscsi:
+libiscsi:
+libiscsi:
