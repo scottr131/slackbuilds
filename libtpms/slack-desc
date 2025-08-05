@@ -1,9 +1,9 @@
-liptpms: libtpms (library that targets TPM functionality for hypervisors)
+libtpms: libtpms (library that targets TPM functionality for hypervisors)
 libtpms:
-liptpms: Libtpms is a library that targets the integration of TPM 
-liptpms: functionality into hypervisors, primarily into Qemu. Libtpms provides
-liptpms: a very narrow public API for this purpose so that integration is
-liptpms: possible. Only the minimum of necessary APIs are made publicly 
+libtpms: Libtpms is a library that targets the integration of TPM 
+libtpms: functionality into hypervisors, primarily into Qemu. Libtpms provides
+libtpms: a very narrow public API for this purpose so that integration is
+libtpms: possible. Only the minimum of necessary APIs are made publicly 
 libtpms: available.
 libtpms:
 libtpms:
