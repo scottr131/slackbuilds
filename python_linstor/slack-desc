@@ -1,4 +1,11 @@
 python_linstor: python_linstor (Python library to communicate with linstor)
-python_linstor:                                                                                                                                                            python_linstor: This package contains a Python library to communicate with
+python_linstor:
+python_linstor: This package contains a Python library to communicate with
 python_linstor: a linstor controller.
-python_linstor:                                                                                                                                                            python_linstor:                                                                                                                                                            python_linstor:                                                                                                                                                            python_linstor:                                                                                                                                                            python_linstor:                                                                                                                                                            python_linstor:                                                                                                                                                            python_linstor:   
+python_linstor:
+python_linstor:
+python_linstor:
+python_linstor:
+python_linstor:
+python_linstor:
+python_linstor:

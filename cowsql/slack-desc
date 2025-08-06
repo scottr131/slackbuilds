@@ -1,0 +1,11 @@
+cowsql: cowsql (an embeddable and replicated SQL database engine) 
+cowsql:
+cowsql: cowsql is a C library that implements an embeddable and replicated 
+cowsql: SQL database library that implements an embeddable and replicated SQL
+cowsql: SQL database engine wit high availability and automatic failover.
+cowsql:
+cowsql: cowsql extends SQLite with a network protocol that can connect 
+cowsql: together various instances of your application and have them act as a
+cowsql: highly-available cluster, with no dependency on external databases.
+cowsql:
+cowsql:
