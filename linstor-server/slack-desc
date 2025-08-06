@@ -1,0 +1,11 @@
+linstor-server: LINSTOR (manages replicated volumes accross a group of machines)
+linstor-server:
+linstor-server: LINSTOR (R), developed by LINBIT (R), is open source software 
+linstor-server: that manages replicated volumes across a group of machines.
+linstor-server: LINSTOR natively integrates with Kubernetes and other platforms and 
+linstor-server: makes building, running, and controlling block storage simple.
+linstor-server: LINSTOR is designed to manage block storage devices for large Linux 
+linstor-server: server clusters.  It's typically used to provide persistent and
+linstor-server: highly available Linux block storage for cloud native and hypervisor
+linstor-server: environments.
+linstor-server:

@@ -1,0 +1,11 @@
+linstor_client: linstor_client (user space client for LINSTOR)
+linstor_client:
+linstor_client: This package contains the user space client to ease DRBD9 
+linstor_client: resource management.
+linstor_client:
+linstor_client:
+linstor_client:
+linstor_client:
+linstor_client:
+linstor_client:
+linstor_client:
