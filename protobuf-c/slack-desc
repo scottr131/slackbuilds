@@ -1,0 +1,11 @@
+protobuf-c: protobuf (a C implementation of Google Protocol Buffers)
+protobuf-c:
+protobuf-c: This is `protobuf-c`, a C implementation of the [Google Protocol 
+protobuf-c: Buffers] data serialization format. It includes `libprotobuf-c`, a 
+protobuf-c: pure C library that implements protobuf encoding and decoding, and 
+protobuf-c: `protoc-gen-c`, a code generator plugin for `protoc` that converts 
+protobuf-c: Protocol Buffer `.proto` files to C descriptor code. `protobuf-c` 
+protobuf-c: formerly included an RPC implementation; that code has been split out 
+protobuf-c: into the [protobuf-c-rpc] project.
+protobuf-c:
+protobuf-c:

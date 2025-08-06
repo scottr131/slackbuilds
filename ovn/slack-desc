@@ -1,0 +1,11 @@
+ovn: ovn (Open Virtual Network - a software network switch)
+ovn:
+ovn: OVN (Open Virtual Network) is a series of daemons that translates
+ovn: virtual network configuration into OpenFlow, and installs them into
+ovn: Open vSwitch. It is licensed under the open source Apache 2 license.
+ovn:
+ovn: OVN provides a higher-layer abstraction than Open vSwitch, working
+ovn: with logical routers and logical switches, rather than flows. OVN is
+ovn: intended to be used by cloud management software (CMS).
+ovn:
+ovn:
