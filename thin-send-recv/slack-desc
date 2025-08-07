@@ -1,0 +1,11 @@
+thin-send-recv: thin-send-recv (a zfs send and recv like utility for LVM)
+thin-send-recv:
+thin-send-recv: This is a utility that mimics zfs send and zfs recv for the LVM 
+thin-send-recv: thin world.
+thin-send-recv:
+thin-send-recv:
+thin-send-recv:
+thin-send-recv:
+thin-send-recv:
+thin-send-recv:
+thin-send-recv:
