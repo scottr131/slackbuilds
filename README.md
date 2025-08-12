@@ -1,4 +1,6 @@
-ckbuild files for various programs on Slackware.  These should produce a functional package, but are far from production ready.
+## Scott's SlackBuilds
+
+These are slackbuild files for various programs on Slackware.  These should produce a functional package, but are far from production ready.  I've tried to group packages into related stacks and denote dependencies. 
 
 #### Qemu Stack 
 - usbredir
