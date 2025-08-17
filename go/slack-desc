@@ -1,0 +1,11 @@
+go: go (The Go Programming Language)
+go:
+go: Go is an open source programming language that makes it easy to build
+go: simple, reliable, and efficient software.
+go: 
+go: Official binary distributions are available at https://go.dev/dl/
+go: This package is built from the official binary distribution.
+go:
+go: You should probably remove GCC Go if you are installing this.
+go:
+go:
