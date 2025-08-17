@@ -1,5 +1,5 @@
 PRGNAM="incus"
-VERSION="6.15.0"
+VERSION="6.15"
 HOMEPAGE="https://linuxcontainers.org/incus/"
 DOWNLOAD="https://github.com/lxc/incus/releases/download/v6.15.0/incus-6.15.tar.xz"
 MD5SUM=""
