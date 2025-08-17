@@ -31,6 +31,7 @@ These are slackbuild files for various programs on Slackware.  These should prod
 
 #### Linstor
 - linstor-server
+- python_linstor
 - linstor_client
 - drbd
 - drbd-utils
