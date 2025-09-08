@@ -1,0 +1,11 @@
+libwebsockets: libwebsockets (http client and server library)
+libwebsockets:
+libwebsockets: Libwebsockets is a simple-to-use, MIT-license, pure C library 
+libwebsockets: providing client and server for http/1, http/2, websockets, MQTT and 
+libwebsockets: other protocols in a security-minded, lightweight, configurable,
+libwebsockets: scalable and flexible way.  It's easy to build and cross-build via 
+libwebsockets: cmake and is suitable for tasks from embedded RTOS through mass cloud
+libwebsockets: serving.
+libwebsockets:
+libwebsockets:
+libwebsockets:
