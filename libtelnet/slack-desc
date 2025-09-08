@@ -1,0 +1,11 @@
+libtelnet: libtelnet (provides handling of the TELNET protocol)
+libtelnet:
+libtelnet: libtelnet provides safe and correct handling of the core TELNET protocol.
+libtelnet: In addition to the base TELNET protocol, libtelnet also implements the Q
+libtelnet: method of TELNET option negotiation. libtelnet can be used for writing 
+libtelnet: servers, clients, or proxies.
+libtelnet:
+libtelnet:
+libtelnet:
+libtelnet:
+libtelnet:
