@@ -1,0 +1,11 @@
+jq: jq (command-line JSON processor)
+jq: 
+jq: `jq` is a lightweight and flexible command-line JSON processor akin
+jq: to `sed`,`awk`,`grep`, and friends for JSON data. It's written in
+jq: portable C and has zero runtime dependencies, allowing you to easily
+jq: slice, filter, map, and transform structured data.
+jq: 
+jq: 
+jq: 
+jq: 
+jq: 
