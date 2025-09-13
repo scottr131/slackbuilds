@@ -1,0 +1,11 @@
+libnbd: libnbd (NBD client library in userspace)
+libnbd:
+libnbd: NBD — Network Block Device — is a protocol for accessing Block 
+libnbd: Devices (hard disks and disk-like things) over a Network. This is
+libnbd: the NBD client library in userspace, a simple library for writing
+libnbd: NBD clients.
+libnbd:
+libnbd:
+libnbd:
+libnbd:
+libnbd:
