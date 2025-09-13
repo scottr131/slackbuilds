@@ -1,0 +1,11 @@
+thrift: thrift (software stack for point-to-point RPC implementation)
+thrift:
+thrift: Thrift provides clean abstractions and implementations for data 
+thrift: transport, data serialization, and application level processing. The
+thrift: code generation system takes a simple definition language as input
+thrift: and generates code across programming languages that uses the
+thrift: abstracted stack to build interoperable RPC clients and servers.
+thrift:
+thrift:
+thrift:
+thrift:
