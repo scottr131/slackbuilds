@@ -1,0 +1,11 @@
+librdkafka: librdkafka (A C library implementation of the Apache Kafka protocol)
+librdkafka:
+librdkafka: A C library implementation of the Apache Kafka protocol, providing 
+librdkafka: Producer, Consumer and Admin clients. It was designed with message
+librdkafka: delivery reliability and high performance in mind, current figures
+librdkafka: exceed 1 million msgs/second for the producer and 3 million 
+librdkafka: msgs/second for the consumer.
+librdkafka: KAFKA is a registered trademark of The Apache Software Foundation 
+librdkafka: and has been licensed for use by librdkafka. librdkafka has no
+librdkafka: affiliation with and is not endorsed by The Apache Software
+librdkafka: Foundation.
