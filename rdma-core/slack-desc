@@ -1,0 +1,11 @@
+rdma-core: rdma-core (userspace components for the kernel's drivers subsystem)
+rdma-core:
+rdma-core: RDMA Core Userspace Libraries and Daemons
+rdma-core:
+rdma-core: This is the userspace components for the Linux Kernel's 
+rdma-core: drivers/infiniband subsystem. Specifically this contains the 
+rdma-core: userspace libraries for ibibverbs,librdmacm, and libibumad.
+rdma-core:
+rdma-core:
+rdma-core:
+rdma-core:
