@@ -1,0 +1,11 @@
+rabbitmq-c: rabbitmq-c ()
+rabbitmq-c:
+rabbitmq-c: A C-language AMQP client library for use with v2.0+ of the
+rabbitmq-c: [RabbitMQ](http://www.rabbitmq.com/) broker.
+rabbitmq-c:
+rabbitmq-c:
+rabbitmq-c:
+rabbitmq-c:
+rabbitmq-c:
+rabbitmq-c:
+rabbitmq-c:
