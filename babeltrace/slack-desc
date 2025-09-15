@@ -1,0 +1,11 @@
+babeltrace: BabelTrace (Trace Format Babel Tower)
+babeltrace:
+babeltrace: This project provides trace read and write libraries, as well as a
+babeltrace: trace converter. A plugin can be created for any trace format to 
+babeltrace: allow its conversion to/from another trace format.
+babeltrace:
+babeltrace: The main format expected to be converted to/from is the Common Trace
+babeltrace: Format (CTF). 
+babeltrace:
+babeltrace:
+babeltrace:
