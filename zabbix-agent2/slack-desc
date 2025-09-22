@@ -1,0 +1,11 @@
+zabbix: zabbix-agent2 (agent 2 for Zabbix monitoring solution)
+zabbix:
+zabbix: An enterprise-class, open-source distributed monitoring solution
+zabbix: that is designed to monitor the performance and availability of 
+zabbix: network devices, servers, services, and other IT resources.
+zabbix:
+zabbix: Zabbix is a flexible solution that can monitor anything from a 
+zabbix: simple, standalone application to a large-scale environment.
+zabbix:
+zabbix: This package contains the go agent (agent 2).
+zabbix:
