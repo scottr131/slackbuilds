@@ -1,1 +1,10 @@
-
+PRGNAM="googletest"
+VERSION="1.17"
+HOMEPAGE="https://github.com/google/googletest"
+DOWNLOAD="https://github.com/google/googletest/releases/download/v1.17.0/googletest-1.17.0.tar.gz"
+MD5SUM=""
+DOWNLOAD_x86_64="https://github.com/google/googletest/releases/download/v1.17.0/googletest-1.17.0.tar.gz"
+MD5SUM_x86_64=""
+REQUIRES="%README%"
+MAINTAINER="github.com/scottr131"
+EMAIL=""
