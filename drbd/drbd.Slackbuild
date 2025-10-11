@@ -25,7 +25,7 @@
 cd $(dirname $0) ; CWD=$(pwd)
 
 PRGNAM=drbd
-VERSION=9.2.14
+VERSION=9.2.15
 BUILD=1
 TAG=${TAG:-_SBo}		# the "_SBo" is required
 PKGTYPE=${PKGTYPE:-tgz}
