@@ -1,0 +1,11 @@
+bash-completion: bash-completion (command line completions for bash)
+bash-completion:
+bash-completion: bash-completion is a collection of command line command completions
+bash-completion: for the Bash shell, collection of helper functions to assist in 
+bash-completion: creating new completions, and set of facilities for loading 
+bash-completion: completions automatically on demand, as well as installing them.
+bash-completion:
+bash-completion:
+bash-completion:
+bash-completion:
+bash-completion:
