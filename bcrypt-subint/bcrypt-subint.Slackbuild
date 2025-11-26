@@ -86,7 +86,7 @@ find -L . \
 
 patch -p1 < $CWD/bcrypt-4.3.0-subinterpreters.patch
 python3 -m build
-pip install dist/*.whl --root=$PKG --root-user-action ignore
+pip install dist/*.whl --root=$PKG --root-user-action ignore --no-deps --no-index
 # Don't ship .la files:
 rm -f $PKG/{,usr/}lib${LIBDIRSUFFIX}/*.la
 
