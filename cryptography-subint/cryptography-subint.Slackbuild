@@ -91,7 +91,7 @@ find -L . \
 patch -p1 < $CWD/cryptography-45.0.7-subinterpreters.patch
 cargo update
 python3 -m build
-pip install dist/*.whl --root=$PKG --root-user-action ignore
+pip install dist/*.whl --root=$PKG --root-user-action ignore --no-deps --no-index
 # Don't ship .la files:
 rm -f $PKG/{,usr/}lib${LIBDIRSUFFIX}/*.la
 
