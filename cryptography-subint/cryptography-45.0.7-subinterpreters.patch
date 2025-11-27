@@ -7,8 +7,8 @@ diff -ruN cryptography-45.0.7/Cargo.toml cryptography-45.0.7-subint/Cargo.toml
  asn1 = { version = "0.21.3", default-features = false }
 -pyo3 = { version = "0.25", features = ["abi3"] }
 -pyo3-build-config = { version = "0.25" }
-+pyo3 = { version = "0.26", features = ["abi3", "unsafe-allow-subinterpreters" ], path="/tmp/SBo/pyo3-0.26.0-subint" }
-+pyo3-build-config = { version = "0.26", path="/tmp/SBo/pyo3-0.26.0-subint/pyo3-build-config" }
++pyo3 = { version = "0.26", features = ["abi3", "unsafe-allow-subinterpreters" ], path="/tmp/SBo/pyo3-subint-0.26.0" }
++pyo3-build-config = { version = "0.26", path="/tmp/SBo/pyo3-subint-0.26.0/pyo3-build-config" }
  openssl = "0.10.72"
  openssl-sys = "0.9.108"
  
