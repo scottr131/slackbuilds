@@ -13,7 +13,7 @@ TARGETS     := \
 	thrift incus go linstor-server python_linstor \
 	linstor_client drbd drbd-utils zfs openvswitch \
 	protobuf-c zabbix zabbix-agent cliff bash-completion \
-	libiscsi pyo3-subint benchmark snappy-rtti
+	libiscsi pyo3-subint benchmark snappy-rtti boost
 
 # ====== Phony Targets ======
 .PHONY: all clean $(TARGETS) \
