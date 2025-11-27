@@ -13,13 +13,13 @@ TARGETS     := \
 	thrift incus go linstor-server python_linstor \
 	linstor_client drbd drbd-utils zfs openvswitch \
 	protobuf-c zabbix zabbix-agent cliff bash-completion \
-	libiscsi pyo3-subint
+	libiscsi pyo3-subint benchmark snappy-rtti
 
 # ====== Phony Targets ======
 .PHONY: all clean $(TARGETS) \
 	swtpm libtpms boost rabbitmq-c \
 	librdkafka raft cowsql skopeo thin-provisioning-tools \
-	benchmark snappy-rtti jdk21 libyang ovn cloud-init \
+	jdk21 libyang ovn cloud-init \
 	temurin-jdk17
 
 # Default: build everything
