@@ -13,12 +13,12 @@ TARGETS     := \
 	thrift incus go linstor-server python_linstor \
 	linstor_client drbd drbd-utils zfs openvswitch \
 	protobuf-c zabbix zabbix-agent cliff bash-completion \
-	libiscsi pyo3-subint benchmark snappy-rtti boost
+	libiscsi pyo3-subint benchmark snappy-rtti boost \
+	ceph swtpm libtpms rabbitmq-c librdkafka
 
 # ====== Phony Targets ======
 .PHONY: all clean $(TARGETS) \
-	swtpm libtpms boost rabbitmq-c \
-	librdkafka raft cowsql skopeo thin-provisioning-tools \
+	raft cowsql skopeo thin-provisioning-tools \
 	jdk21 libyang ovn cloud-init \
 	temurin-jdk17
 
