@@ -1,5 +1,5 @@
 PRGNAM="googletest"
-VERSION="1.17"
+VERSION="1.17.0"
 HOMEPAGE="https://github.com/google/googletest"
 DOWNLOAD="https://github.com/google/googletest/releases/download/v1.17.0/googletest-1.17.0.tar.gz"
 MD5SUM=""
