@@ -1,0 +1,82 @@
+diff -ruN ceph-orig/cmake/modules/BuildArrow.cmake ceph-cmake/cmake/modules/BuildArrow.cmake
+--- ceph-orig/cmake/modules/BuildArrow.cmake    2025-09-04 15:35:40.000000000 -0400
++++ ceph-cmake/cmake/modules/BuildArrow.cmake   2025-09-16 00:37:56.621000000 -0400
+@@ -4,6 +4,8 @@
+   # only enable the parquet component
+   set(arrow_CMAKE_ARGS -DARROW_PARQUET=ON)
+
++  list(APPEND arrow_CMAKE_ARGS -DCMAKE_POLICY_VERSION_MINIMUM=3.5)
++
+   # only use preinstalled dependencies for arrow, don't fetch/build any
+   list(APPEND arrow_CMAKE_ARGS -DARROW_DEPENDENCY_SOURCE=SYSTEM)
+
+diff -ruN ceph-orig/cmake/modules/BuildOpentelemetry.cmake ceph-cmake/cmake/modules/BuildOpentelemetry.cmake
+--- ceph-orig/cmake/modules/BuildOpentelemetry.cmake    2025-09-04 15:35:40.000000000 -0400
++++ ceph-cmake/cmake/modules/BuildOpentelemetry.cmake   2025-09-16 00:37:56.621000000 -0400
+@@ -10,6 +10,7 @@
+   set(opentelemetry_BINARY_DIR "${CMAKE_CURRENT_BINARY_DIR}/opentelemetry-cpp")
+   set(opentelemetry_cpp_targets opentelemetry_trace opentelemetry_exporter_jaeger_trace)
+   set(opentelemetry_CMAKE_ARGS -DCMAKE_POSITION_INDEPENDENT_CODE=ON
++                               -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+                                -DWITH_JAEGER=ON
+                                -DBUILD_TESTING=OFF
+                                -DCMAKE_BUILD_TYPE=Release
+diff -ruN ceph-orig/cmake/modules/BuildUtf8proc.cmake ceph-cmake/cmake/modules/BuildUtf8proc.cmake
+--- ceph-orig/cmake/modules/BuildUtf8proc.cmake 2025-09-04 15:35:40.000000000 -0400
++++ ceph-cmake/cmake/modules/BuildUtf8proc.cmake        2025-09-16 00:37:56.621000000 -0400
+@@ -4,6 +4,8 @@
+   # only build static version
+   list(APPEND utf8proc_CMAKE_ARGS -DBUILD_SHARED_LIBS=OFF)
+
++  list(APPEND utf8proc_CMAKE_ARGS -DCMAKE_POLICY_VERSION_MINIMUM=3.5)
++
+   # cmake doesn't properly handle arguments containing ";", such as
+   # CMAKE_PREFIX_PATH, for which reason we'll have to use some other separator.
+   string(REPLACE ";" "!" CMAKE_PREFIX_PATH_ALT_SEP "${CMAKE_PREFIX_PATH}")
+diff -ruN ceph-orig/cmake/modules/BuildZstd.cmake ceph-cmake/cmake/modules/BuildZstd.cmake
+--- ceph-orig/cmake/modules/BuildZstd.cmake     2025-09-04 15:35:40.000000000 -0400
++++ ceph-cmake/cmake/modules/BuildZstd.cmake    2025-09-16 00:37:56.621000000 -0400
+@@ -10,6 +10,7 @@
+                -DCMAKE_C_FLAGS=${ZSTD_C_FLAGS}
+                -DCMAKE_AR=${CMAKE_AR}
+                -DCMAKE_POSITION_INDEPENDENT_CODE=${ENABLE_SHARED}
++               -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+     BINARY_DIR ${CMAKE_CURRENT_BINARY_DIR}/libzstd
+     BUILD_COMMAND ${CMAKE_COMMAND} --build <BINARY_DIR> --target libzstd_static
+     BUILD_BYPRODUCTS "${CMAKE_CURRENT_BINARY_DIR}/libzstd/lib/libzstd.a"
+diff -ruN ceph-orig/src/arrow/cpp/cmake_modules/ThirdpartyToolchain.cmake ceph-cmake/src/arrow/cpp/cmake_modules/ThirdpartyToolchain.cmake
+--- ceph-orig/src/arrow/cpp/cmake_modules/ThirdpartyToolchain.cmake     2024-01-16 09:38:51.000000000 -0500
++++ ceph-cmake/src/arrow/cpp/cmake_modules/ThirdpartyToolchain.cmake    2025-09-16 00:57:50.297000000 -0400
+@@ -2379,7 +2379,9 @@
+                       PREFIX "${CMAKE_BINARY_DIR}"
+                       URL ${XSIMD_SOURCE_URL}
+                       URL_HASH "SHA256=${ARROW_XSIMD_BUILD_SHA256_CHECKSUM}"
+-                      CMAKE_ARGS ${XSIMD_CMAKE_ARGS})
++                      CMAKE_ARGS
++                               -DCMAKE_POLICY_VERSION_MINIMUM=3.5
++                               ${XSIMD_CMAKE_ARGS})
+
+   set(XSIMD_INCLUDE_DIR "${XSIMD_PREFIX}/include")
+   # The include directory must exist before it is referenced by a target.
+diff -ruN ceph-orig/src/rocksdb/db/blob/blob_file_meta.h ceph-cmake/src/rocksdb/db/blob/blob_file_meta.h
+--- ceph-orig/src/rocksdb/db/blob/blob_file_meta.h      2023-05-24 15:55:23.000000000 -0400
++++ ceph-cmake/src/rocksdb/db/blob/blob_file_meta.h     2025-09-16 00:37:56.621000000 -0400
+@@ -10,6 +10,7 @@
+ #include <memory>
+ #include <string>
+ #include <unordered_set>
++#include <cstdint>
+
+ #include "rocksdb/rocksdb_namespace.h"
+
+diff -ruN ceph-orig/src/rocksdb/include/rocksdb/trace_record.h ceph-cmake/src/rocksdb/include/rocksdb/trace_record.h
+--- ceph-orig/src/rocksdb/include/rocksdb/trace_record.h        2023-05-24 15:55:23.000000000 -0400
++++ ceph-cmake/src/rocksdb/include/rocksdb/trace_record.h       2025-09-16 00:37:56.621000000 -0400
+@@ -8,6 +8,7 @@
+ #include <memory>
+ #include <string>
+ #include <vector>
++#include <cstdint>
+
+ #include "rocksdb/rocksdb_namespace.h"
+ #include "rocksdb/slice.h"
