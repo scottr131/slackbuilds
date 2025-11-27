@@ -24,7 +24,7 @@
 
 cd $(dirname $0) ; CWD=$(pwd)
 
-PRGNAM=pyo3
+PRGNAM=pyo3-subint
 VERSION=0.26.0
 BUILD=1
 TAG=${TAG:-_SBo}		# the "_SBo" is required
@@ -76,8 +76,8 @@ mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $PRGNAM-$VERSION
 tar xvf $CWD/$PRGNAM-$VERSION.tar.*
-mv $PRGNAM-$VERSION $PRGNAM-$VERSION-subint
-cd $PRGNAM-$VERSION-subint
+mv pyo3-$VERSION $PRGNAM-$VERSION
+cd $PRGNAM-$VERSION
 chown -R root:root .
 find -L . \
  \( -perm 777 -o -perm 775 -o -perm 750 -o -perm 711 -o -perm 555 \
@@ -85,7 +85,7 @@ find -L . \
  \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
   -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
 
-patch -p1 < $CWD/pyo3-0.26.0-subinterpreters.patch
+patch -p1 < $CWD/pyo3-$VERSION-subinterpreters.patch
 
 cargo build
 # No install, just build to be linked elsewhere
