@@ -1,4 +1,4 @@
-PRGNAM="LTTng-UST"
+PRGNAM="lttng-ust"
 VERSION="2.14.0"
 HOMEPAGE="https://lttng.org/"
 DOWNLOAD="https://lttng.org/files/lttng-ust/lttng-ust-2.14.0.tar.bz2"
