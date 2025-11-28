@@ -25,7 +25,7 @@
 cd $(dirname $0) ; CWD=$(pwd)
 
 PRGNAM=openvswitch
-VERSION=3.6.0
+VERSION=3.6.1
 BUILD=1
 TAG=${TAG:-_SBo}		# the "_SBo" is required
 PKGTYPE=${PKGTYPE:-tgz}
