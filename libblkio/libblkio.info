@@ -1,5 +1,5 @@
 PRGNAM="libblkio"
-VERSION="1.5.0"
+VERSION="v1.5.0"
 HOMEPAGE="https://gitlab.com/libblkio/libblkio"
 DOWNLOAD="https://gitlab.com/libblkio/libblkio/-/archive/v1.5.0/libblkio-v1.5.0.tar.bz2"
 MD5SUM="2dec38f46af2d63186975627d4628f84"
