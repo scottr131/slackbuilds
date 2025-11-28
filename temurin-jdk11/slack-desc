@@ -1,0 +1,11 @@
+jdk: jdk (Eclipse Temurin OpenJDK11)
+jdk:
+jdk: The binaries of the Eclipse Temurin JDK as distributed. Packaged for
+jdk: installation into /opt on Slackware.
+jdk:
+jdk:
+jdk:
+jdk:
+jdk:
+jdk:
+jdk:
