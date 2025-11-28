@@ -15,14 +15,14 @@ TARGETS     := \
 	protobuf-c zabbix zabbix-agent cliff bash-completion \
 	libiscsi pyo3-subint benchmark snappy-rtti boost \
 	ceph swtpm libtpms rabbitmq-c librdkafka libyang \
-	ovn
+	ovn raft cowsql skopeo
 
 BZ2TARGETS     := \
 	libblkio
 
 # ====== Phony Targets ======
 .PHONY: all clean $(TARGETS) $(BZ2TARGETS) \
-	raft cowsql skopeo thin-provisioning-tools \
+	thin-provisioning-tools \
 	jdk21 cloud-init \
 	temurin-jdk17
 
