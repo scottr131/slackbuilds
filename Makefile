@@ -5,7 +5,7 @@ BLDTHREADS  ?= $(shell nproc)
 
 # ====== Manually Specified Targets ======
 TARGETS     := \
-	usbredir spice-protocol spice libblkio numactl qemu \
+	usbredir spice-protocol spice numactl qemu \
 	libosinfo osinfo-db-tools libvirt libvirt-glib \
 	libvirt-python virt-manager spice-gtk gtk-vnc \
 	jq rdma-core bcrypt-subint cryptography-subint \
@@ -14,12 +14,16 @@ TARGETS     := \
 	linstor_client drbd drbd-utils zfs openvswitch \
 	protobuf-c zabbix zabbix-agent cliff bash-completion \
 	libiscsi pyo3-subint benchmark snappy-rtti boost \
-	ceph swtpm libtpms rabbitmq-c librdkafka
+	ceph swtpm libtpms rabbitmq-c librdkafka libyang \
+	ovn
+
+BZ2TARGETS     := \
+	libblkio
 
 # ====== Phony Targets ======
-.PHONY: all clean $(TARGETS) \
+.PHONY: all clean $(TARGETS) $(BZ2TARGETS) \
 	raft cowsql skopeo thin-provisioning-tools \
-	jdk21 libyang ovn cloud-init \
+	jdk21 cloud-init \
 	temurin-jdk17
 
 # Default: build everything
@@ -32,6 +36,25 @@ $(TARGETS):
 	cd $@; \
 	. ./$@.info; \
 	FILE=$$(basename "$${DOWNLOAD_x86_64}"); EXPECTED="$${PRGNAM}-$${VERSION}.tar.gz"; \
+	if [ ! -f "$$EXPECTED" ]; then \
+  		echo "==> Downloading $$FILE from $${DOWNLOAD_x86_64}"; \
+  		curl -L -o "$$FILE" "$${DOWNLOAD_x86_64}"; \
+		if [ "$$FILE" != "$$EXPECTED" ]; then \
+    		    echo "==> Renaming $$FILE to $$EXPECTED"; \
+		    mv "$$FILE" "$$EXPECTED"; \
+		fi; \
+	else \
+  		echo "==> Source archive already exists: $$FILE"; \
+	fi; \
+	chmod +x ./$@.Slackbuild; \
+	sudo OUTPUT="$(OUTPUT)" PKGTYPE="$(PKGTYPE)" BLDTHREADS="$(BLDTHREADS)" ./$@.Slackbuild
+
+$(BZ2TARGETS):
+	@echo "==> Building $@"
+	@set -e; \
+	cd $@; \
+	. ./$@.info; \
+	FILE=$$(basename "$${DOWNLOAD_x86_64}"); EXPECTED="$${PRGNAM}-$${VERSION}.tar.bz2"; \
 	if [ ! -f "$$EXPECTED" ]; then \
   		echo "==> Downloading $$FILE from $${DOWNLOAD_x86_64}"; \
   		curl -L -o "$$FILE" "$${DOWNLOAD_x86_64}"; \
