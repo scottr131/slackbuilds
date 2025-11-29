@@ -1,4 +1,4 @@
-PRGNAM="python-linstor"
+PRGNAM="python_linstor"
 VERSION="1.27.0"
 HOMEPAGE="https://linbit.com/linstor/"
 DOWNLOAD="https://linbit.gateway.scarf.sh//downloads/linstor/python_linstor-1.27.0.tar.gz"
