@@ -1,0 +1,11 @@
+opentofu: opentofu (an OSS tool for managing infrastructure)
+opentofu:
+opentofu: OpenTofu is an OSS tool for building, changing, and versioning 
+opentofu: infrastructure safely and efficiently. OpenTofu can manage existing 
+opentofu: and popular service providers as well as custom in-house solutions.
+opentofu:
+opentofu: The key features of OpenTofu are:
+opentofu: - **Infrastructure as Code** 
+opentofu: - **Execution Plans**
+opentofu: - **Resource Graph**
+opentofu: - **Change Automation**
