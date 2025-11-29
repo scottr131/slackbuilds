@@ -1,0 +1,11 @@
+incus-ui-canonical: incus-ui-canonical (browser frontend for Incus)
+incus-ui-canonical:
+incus-ui-canonical: Incus-UI-Canonical is a browser frontend for Incus. It enables easy
+incus-ui-canonical: and accessible container and virtual machine management. Targets 
+incus-ui-canonical: small and large scale private clouds.
+incus-ui-canonical:
+incus-ui-canonical: Incus-UI-Canonical is Zabbly's fork of Canonical's LXD-UI for use
+incus-ui-canonical: with Incus.  Packaged for use with Slackware.
+incus-ui-canonical:
+incus-ui-canonical:
+incus-ui-canonical:

@@ -17,7 +17,8 @@ TARGETS     := \
 	ceph swtpm libtpms rabbitmq-c librdkafka libyang \
 	ovn raft cowsql skopeo temurin-jdk11 ansible \
 	glances rundeck temurin-jdk17 temurin-jdk21 \
-	thin-provisioning-tools opentofu
+	thin-provisioning-tools opentofu \
+	incus-ui-canonical
 
 BZ2TARGETS     := \
 	libblkio
