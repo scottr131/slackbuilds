@@ -1,11 +1,11 @@
-jdk: jdk (Eclipse Temurin OpenJDK17)
-jdk:
-jdk: The binaries of the Eclipse Temurin JDK as distributed. Packaged for
-jdk: installation into /opt on Slackware.
-jdk:
-jdk:
-jdk:
-jdk:
-jdk:
-jdk:
-jdk:
+temurin-jdk17: temurin-jdk17 (Eclipse Temurin OpenJDK17)
+temurin-jdk17:
+temurin-jdk17: The binaries of the Eclipse Temurin JDK as distributed. Packaged for
+temurin-jdk17: installation into /opt on Slackware.
+temurin-jdk17:
+temurin-jdk17:
+temurin-jdk17:
+temurin-jdk17:
+temurin-jdk17:
+temurin-jdk17:
+temurin-jdk17:
