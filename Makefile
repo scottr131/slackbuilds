@@ -16,16 +16,15 @@ TARGETS     := \
 	libiscsi pyo3-subint benchmark snappy-rtti boost \
 	ceph swtpm libtpms rabbitmq-c librdkafka libyang \
 	ovn raft cowsql skopeo temurin-jdk11 ansible \
-	glances rundeck
+	glances rundeck temurin-jdk17 temurin-jdk21 \
+	thin-provisioning-tools
 
 BZ2TARGETS     := \
 	libblkio
 
 # ====== Phony Targets ======
 .PHONY: all clean $(TARGETS) $(BZ2TARGETS) \
-	thin-provisioning-tools \
-	jdk21 cloud-init \
-	temurin-jdk17
+	cloud-init
 
 # Default: build everything
 all: $(TARGETS)
