@@ -15,7 +15,8 @@ TARGETS     := \
 	protobuf-c zabbix zabbix-agent cliff bash-completion \
 	libiscsi pyo3-subint benchmark snappy-rtti boost \
 	ceph swtpm libtpms rabbitmq-c librdkafka libyang \
-	ovn raft cowsql skopeo temurin-jdk11
+	ovn raft cowsql skopeo temurin-jdk11 ansible \
+	glances rundeck
 
 BZ2TARGETS     := \
 	libblkio
