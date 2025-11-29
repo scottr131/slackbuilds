@@ -1,0 +1,11 @@
+ansible: ansible (a radically simple IT automation system)
+ansible:
+ansible: Ansible is a radically simple IT automation system. It handles 
+ansible: configuration management, application deployment, cloud 
+ansible: provisioning, ansible: ad-hoc task execution, network automation,
+ansible: and multi-node orchestration. Ansible makes complex
+ansible: changes like zero-downtime rolling updates with load balancers easy.
+ansible:
+ansible:
+ansible:
+ansible:
