@@ -1,0 +1,11 @@
+garage: garage (an S3-compatible distributed object storage service)
+garage:
+garage: Garage is an S3-compatible distributed object storage service
+garage: designed for self-hosting at a small-to-medium scale.
+garage:
+garage: Garage is designed for storage clusters composed of nodes running
+garage: at different physical locations, in order to easily provide a storage 
+garage: service that replicates data at these different locations and stays
+garage: available even when some servers are unreachable. Garage also focuses
+garage: on being lightweight, easy to operate, and highly resilient to machine
+garage: failures.
