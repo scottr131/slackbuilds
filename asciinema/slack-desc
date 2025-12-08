@@ -1,0 +1,11 @@
+asciinema: asciinema (a tool for recording terminal sessions)
+asciinema:
+asciinema: asciinema (aka asciinema CLI or asciinema recorder) is a 
+asciinema: command-line tool for recording and live streaming terminal
+asciinema: sessions.
+asciinema:
+asciinema: Unlike typical screen recording software, which records 
+asciinema: visual output of a screen into a heavyweight video files,
+asciinema: asciinema CLI runs inside a terminal, capturing terminal
+asciinema: session output into a lightweight recording files in the
+asciinema: asciicast format, or streaming it live in real-time.
