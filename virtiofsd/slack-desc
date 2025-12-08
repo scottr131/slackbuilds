@@ -1,0 +1,11 @@
+virtiofsd: virtiofsd (A vhost-user device daemon written in Rust)
+virtiofsd:
+virtiofsd: A [virtio-fs](https://virtio-fs.gitlab.io/) vhost-user device daemon
+virtiofsd: written in Rust.
+virtiofsd:
+virtiofsd:
+virtiofsd:
+virtiofsd:
+virtiofsd:
+virtiofsd:
+virtiofsd:
