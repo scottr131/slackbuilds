@@ -1,0 +1,11 @@
+lighttpd: lighttpd (a secure, fast, compliant and very flexible web-server)
+lighttpd:
+lighttpd: lighttpd a secure, fast, compliant and very flexible web-server which
+lighttpd: has been optimized for high-performance environments. It has a very
+lighttpd: low memory footprint compared to other webservers and takes care of 
+lighttpd: cpu-load. Its advanced feature-set (FastCGI, CGI, Auth, 
+lighttpd: Output-Compression, URL-Rewriting and many more) make lighttpd the 
+lighttpd: perfect webserver-software for every server that is suffering load
+lighttpd: problems.
+lighttpd:
+lighttpd:

@@ -18,7 +18,8 @@ TARGETS     := \
 	ovn raft cowsql skopeo temurin-jdk11 ansible \
 	glances rundeck temurin-jdk17 temurin-jdk21 \
 	thin-provisioning-tools opentofu \
-	incus-ui-canonical
+	incus-ui-canonical garage prometheus \
+	asciinema virtiofsd lighthttpd
 
 BZ2TARGETS     := \
 	libblkio
