@@ -17,7 +17,6 @@ pipeline {
         
         stage('Build linstor-server') {
             steps {
-                sh 'export PATH=\$PATH:/opt/java17/bin'
                 sh 'make linstor-server'
             }
             post {
