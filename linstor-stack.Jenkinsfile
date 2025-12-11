@@ -6,6 +6,7 @@ pipeline {
         ARCH = "x86_64"
         TAG = "_SBo"
         BUILD = "1"
+        JAVA_HOME = "/opt/java17"
     }
     stages {
         stage('Pull build scripts') {
@@ -16,7 +17,7 @@ pipeline {
         
         stage('Build linstor-server') {
             steps {
-                sh 'make linstor-server'
+                sh 'PATH=\$PATH:/opt/java17/bin make linstor-server'
             }
             post {
                 success {
