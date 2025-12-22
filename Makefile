@@ -19,7 +19,9 @@ TARGETS     := \
 	glances rundeck temurin-jdk17 temurin-jdk21 \
 	thin-provisioning-tools opentofu \
 	incus-ui-canonical garage prometheus \
-	asciinema virtiofsd lighthttpd
+	asciinema virtiofsd lighthttpd vtm \
+	containerd cri-tools cni-plugins runc \
+	kubernetes nerdctl
 
 BZ2TARGETS     := \
 	libblkio
