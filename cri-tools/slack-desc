@@ -1,0 +1,11 @@
+cri-tools: cri-tools (CLI and validation tools for CRI) 
+cri-tools:
+cri-tools: CLI and validation tools for Kubelet Container Runtime Interface 
+cri-tools: (CRI).
+cri-tools:
+cri-tools: cri-tools aims to provide a series of debugging and validation tools
+cri-tools: for Kubelet CRI, which includes:
+cri-tools:
+cri-tools: - crictl: CLI for kubelet CRI.
+cri-tools: - critest: validation test suites for kubelet CRI.
+cri-tools:

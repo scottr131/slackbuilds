@@ -1,0 +1,11 @@
+containerd: containerd (an industry-standard container runtime)
+containerd:
+containerd: containerd is an industry-standard container runtime with an emphasis
+containerd: on simplicity, robustness, and portability. It is available as a
+containerd: daemon for Linux and Windows, which can manage the complete container
+containerd: lifecycle of its host system: image transfer and storage, container
+containerd: execution and supervision, low-level storage and network attachments,
+containerd: etc.
+containerd:
+containerd:
+containerd:
