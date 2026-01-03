@@ -1,5 +1,5 @@
 PRGNAM="xrdp"
-VERSION="10.0.4.1"
+VERSION="0.10.4.1"
 HOMEPAGE="https://github.com/neutrinolabs/xrdp"
 DOWNLOAD="https://github.com/neutrinolabs/xrdp/releases/download/v0.10.4.1/xrdp-0.10.4.1.tar.gz"
 MD5SUM=""
