@@ -1,0 +1,11 @@
+glow: glow (Render markdown on the CLI, with pizzazz!)
+glow:
+glow: Glow is a terminal based markdown reader designed from the ground up 
+glow: to bring out the beauty—and power—of the CLI.
+glow:
+glow: Use it to discover markdown files, read documentation directly on the
+glow: command line. Glow will find local markdown files in subdirectories or
+glow: a local Git repository.
+glow:
+glow:
+glow:
