@@ -265,16 +265,6 @@ pipeline {
                 sh "source rabbitmq-c/rabbitmq-c.info; sudo installpkg rabbitmq-c-\${VERSION}-\${ARCH}-\${BUILD}\${TAG}.\${PKGTYPE};"
             }
         }  
-        stage("Build ceph") {
-            steps {
-                sh "make ceph"
-            }
-            post {
-                success {
-                    archiveArtifacts(artifacts: '*.txz', fingerprint: true, allowEmptyArchive: true)
-                }
-            }
-        }    
         stage("Build librdkafka") {
             steps {
                 sh "make librdkafka"
@@ -292,6 +282,16 @@ pipeline {
             }
         }   
     
+        stage("Build ceph") {
+            steps {
+                sh "make ceph"
+            }
+            post {
+                success {
+                    archiveArtifacts(artifacts: '*.txz', fingerprint: true, allowEmptyArchive: true)
+                }
+            }
+        }    
         stage("Install ceph") {
             steps {
                 sh "source ceph/ceph.info; sudo installpkg ceph-\${VERSION}-\${ARCH}-\${BUILD}\${TAG}.\${PKGTYPE};"
