@@ -21,7 +21,7 @@ TARGETS     := \
 	incus-ui-canonical garage prometheus \
 	asciinema virtiofsd lighthttpd vtm \
 	containerd cri-tools cni-plugins runc \
-	kubernetes nerdctl fresh bat btop
+	kubernetes nerdctl fresh bat btop glow
 
 BZ2TARGETS     := \
 	libblkio
