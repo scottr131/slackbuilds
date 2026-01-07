@@ -1,0 +1,11 @@
+btop: btop (a terminal based system resource monitor with themes)
+btop:
+btop: Resource monitor that shows usage and stats for processor, memory, 
+btop: disks, network and processes. C++ version and continuation of bashtop 
+btop: and bpytop.
+btop:
+btop: - Easy to use, with a game inspired menu system.
+btop: - Full mouse support
+btop: - Fast and responsive UI with UP, DOWN key process selection.
+btop: - Graph for network usage, IO activity and speeds for disks
+btop: - And more...
