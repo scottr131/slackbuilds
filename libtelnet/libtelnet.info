@@ -1,5 +1,5 @@
 PRGNAM="libtelnet"
-VERSION=""
+VERSION="0.23"
 HOMEPAGE="https://github.com/seanmiddleditch/libtelnet"
 DOWNLOAD="https://github.com/seanmiddleditch/libtelnet/releases/download/0.23/libtelnet-0.23.tar.gz"
 MD5SUM=""
