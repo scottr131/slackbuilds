@@ -113,9 +113,9 @@ pipeline {
             }
         }     
 
-        stage('Build libvirt-python') {
+        stage('Build libvirt_python') {
             steps {
-                sh 'make libvirt-python'
+                sh 'make libvirt_python'
             }
             post {
                 success {
@@ -123,9 +123,9 @@ pipeline {
                 }
             }
         }        
-        stage("Install libvirt-python") {
+        stage("Install libvirt_python") {
             steps {
-                sh "source libvirt-python/libvirt-python.info; sudo installpkg libvirt-python-\${VERSION}-\${ARCH}-\${BUILD}\${TAG}.\${PKGTYPE};"
+                sh "source libvirt_python/libvirt_python.info; sudo installpkg libvirt_python-\${VERSION}-\${ARCH}-\${BUILD}\${TAG}.\${PKGTYPE};"
             }
         }     
 
