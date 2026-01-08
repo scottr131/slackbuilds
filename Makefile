@@ -7,7 +7,7 @@ BLDTHREADS  ?= $(shell nproc)
 TARGETS     := \
 	usbredir spice-protocol spice numactl qemu \
 	libosinfo osinfo-db-tools libvirt libvirt-glib \
-	libvirt-python virt-manager spice-gtk gtk-vnc \
+	libvirt_python virt-manager spice-gtk gtk-vnc \
 	jq rdma-core bcrypt-subint cryptography-subint \
 	libnbd googletest oath-toolkit lttng-ust babeltrace \
 	thrift incus go linstor-server python_linstor \
