@@ -58,6 +58,17 @@ pipeline {
                 }
             }
         }        
+
+        stage('Build incus-ui-canonical') {
+            steps {
+                sh 'make incus-ui-canonical'
+            }
+            post {
+                success {
+                    archiveArtifacts artifacts: '*.txz', followSymlinks: false
+                }
+            }
+        }        
         
 
 
