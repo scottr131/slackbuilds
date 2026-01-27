@@ -47,7 +47,7 @@ pipeline {
             }
         }       
 
-
+/* Test without libyang
         stage('Build libyang') {
             steps {
                 sh 'make libyang'
@@ -64,7 +64,7 @@ pipeline {
                 sh "source libyang/libyang.info; sudo installpkg libyang-\${VERSION}-\${ARCH}-\${BUILD}\${TAG}.\${PKGTYPE};"
             }
         }
-
+*/
         stage('Build ovn') {
             steps {
                 sh 'make ovn'
