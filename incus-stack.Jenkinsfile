@@ -50,7 +50,7 @@ pipeline {
 
         stage('Build incus') {
             steps {
-                sh 'make incus'
+                sh 'PATH=$PATH:/opt/go/bin make incus'
             }
             post {
                 success {
