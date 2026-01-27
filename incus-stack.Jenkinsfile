@@ -74,7 +74,7 @@ pipeline {
 
         stage("Build skopeo") {
             steps {
-                sh 'make skopeo'
+                sh 'PATH=$PATH:/opt/go/bin make skopeo'
             }
             post {
                 success {
