@@ -52,7 +52,7 @@ $(TARGETS):
   		echo "==> Source archive already exists: $$FILE"; \
 	fi; \
 	chmod +x ./$@.Slackbuild; \
-	sudo OUTPUT="$(OUTPUT)" PKGTYPE="$(PKGTYPE)" BLDTHREADS="$(BLDTHREADS)" ./$@.Slackbuild
+	sudo JAVA_HOME="$(JAVA_HOME)" PATH="$(PATH)" OUTPUT="$(OUTPUT)" PKGTYPE="$(PKGTYPE)" BLDTHREADS="$(BLDTHREADS)" ./$@.Slackbuild
 
 $(BZ2TARGETS):
 	@echo "==> Building $@"
@@ -71,5 +71,5 @@ $(BZ2TARGETS):
   		echo "==> Source archive already exists: $$FILE"; \
 	fi; \
 	chmod +x ./$@.Slackbuild; \
-	sudo OUTPUT="$(OUTPUT)" PKGTYPE="$(PKGTYPE)" BLDTHREADS="$(BLDTHREADS)" ./$@.Slackbuild
+	sudo JAVA_HOME="$(JAVA_HOME)" PATH="$(PATH)" OUTPUT="$(OUTPUT)" PKGTYPE="$(PKGTYPE)" BLDTHREADS="$(BLDTHREADS)" ./$@.Slackbuild
 
