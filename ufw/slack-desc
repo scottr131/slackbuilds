@@ -1,0 +1,11 @@
+ufw: ufw (a user friendly firewall)
+ufw:
+ufw: Developed to ease iptables firewall configuration, ufw provides a
+ufw: user friendly way to create an IPv4 or IPv6 host-based firewall.
+ufw: By default UFW is disabled.
+ufw:
+ufw: What does it mean?  It has come to mean 'Uncomplicated Firewall',
+ufw: but you can change it to something more suitable if you want. If
+ufw: you like it, you might pick 'Universal Firewall', or 'Ultimate
+ufw: Firewall'. If you are not a fan, perhaps 'Unbearable Firewall'.
+ufw: Have fun!
