@@ -162,7 +162,7 @@ pipeline {
         
         stage("Build qemu") {
             steps {
-                sh "make qemu"
+                sh 'EXTRA_ARGS="--target-list=x86_64-softmmu --disable-gtk --disable-gtk-clipboard --disable-opengl --disable-oss --disable-pa --disable-sdl --disable-sdl-image --disable-vnc" make qemu'
             }
             post {
                 success {
