@@ -84,6 +84,8 @@ chown -R root:root .
 # \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
 #  -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
 
+echo "Configuring with $@"
+
 CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
 ./configure \
@@ -93,7 +95,7 @@ CXXFLAGS="$SLKCFLAGS" \
   --localstatedir=/var \
   --mandir=/usr/man \
   --docdir=/usr/doc/$PRGNAM-$VERSION \
-  --build=$ARCH-slackware-linux --disable-docs
+  --build=$ARCH-slackware-linux --disable-docs $@
 
 make -j ${BLDTHREADS:-1}
 make install DESTDIR=$PKG
