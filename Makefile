@@ -22,7 +22,7 @@ TARGETS     := \
 	asciinema virtiofsd lighthttpd vtm \
 	containerd cri-tools cni-plugins runc \
 	kubernetes nerdctl fresh bat btop glow libwebsockets \
-	libtelnet ufw
+	libtelnet ufw xrdp xorgxrdp
 
 BZ2TARGETS     := \
 	libblkio
