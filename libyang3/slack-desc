@@ -1,0 +1,11 @@
+libyang: libyang3 (YANG data modelling language parser and toolkit)
+libyang:
+libyang: libyang is a YANG data modelling language parser and toolkit written 
+libyang: (and providing API) in C. The library is used e.g. in [libnetconf2],
+libyang: [Netopeer2] or [sysrepo] projects.
+libyang:
+libyang: This package contains major version 3 of libyang.
+libyang:
+libyang:
+libyang:
+libyang:
