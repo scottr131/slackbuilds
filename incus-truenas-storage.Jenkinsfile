@@ -14,7 +14,7 @@ pipeline {
             }
         }
         
-        stage('Build') {
+        stage('Build open-isns') {
             steps {
                 sh 'make open-isns'
             }
@@ -31,7 +31,7 @@ pipeline {
             }
         }
 
-        stage('Build') {
+        stage('Build open-iscsi') {
             steps {
                 sh 'make open-iscsi'
             }
@@ -42,7 +42,7 @@ pipeline {
             }
         }        
         
-        stage('Build') {
+        stage('Build truenas_incus_ctl') {
             steps {
                 sh 'make truenas_incus_ctl'
             }
@@ -55,7 +55,7 @@ pipeline {
 
 
         
-        stage('Build') {
+        stage('Build zfs') {
             steps {
                 sh 'make zfs'
             }
