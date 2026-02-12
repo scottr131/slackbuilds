@@ -14,7 +14,7 @@ TARGETS     := \
 	linstor_client drbd drbd-utils zfs openvswitch \
 	protobuf-c zabbix zabbix-agent cliff bash-completion \
 	libiscsi pyo3-subint benchmark snappy-rtti boost \
-	ceph swtpm libtpms rabbitmq-c librdkafka libyang \
+	ceph swtpm libtpms rabbitmq-c librdkafka libyang3 \
 	ovn raft cowsql skopeo temurin-jdk11 ansible \
 	glances rundeck temurin-jdk17 temurin-jdk21 \
 	thin-provisioning-tools opentofu \
@@ -22,7 +22,8 @@ TARGETS     := \
 	asciinema virtiofsd lighthttpd vtm \
 	containerd cri-tools cni-plugins runc \
 	kubernetes nerdctl fresh bat btop glow libwebsockets \
-	libtelnet ufw xrdp xorgxrdp
+	libtelnet ufw xrdp xorgxrdp frr libyang4 etcd \
+	open-isns open-iscsi
 
 BZ2TARGETS     := \
 	libblkio
