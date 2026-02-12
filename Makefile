@@ -23,7 +23,7 @@ TARGETS     := \
 	containerd cri-tools cni-plugins runc \
 	kubernetes nerdctl fresh bat btop glow libwebsockets \
 	libtelnet ufw xrdp xorgxrdp frr libyang4 etcd \
-	open-isns open-iscsi
+	open-isns open-iscsi truenas_incus_ctl
 
 BZ2TARGETS     := \
 	libblkio
