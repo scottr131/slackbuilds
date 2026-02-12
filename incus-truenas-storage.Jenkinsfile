@@ -27,7 +27,7 @@ pipeline {
         
         stage("Install open-isns") {
             steps {
-                sh "source open-isns/open-isns.info; sudo installpkg raft-\${VERSION}-\${ARCH}-\${BUILD}\${TAG}.\${PKGTYPE};"
+                sh "source open-isns/open-isns.info; sudo installpkg open-isns-\${VERSION}-\${ARCH}-\${BUILD}\${TAG}.\${PKGTYPE};"
             }
         }
 
