@@ -58,6 +58,28 @@ pipeline {
             }
         }     
 
+        stage('Build ufw') {
+            steps {
+                sh 'make ufw'
+            }
+            post {
+                success {
+                    archiveArtifacts(artifacts: '*.txz', followSymlinks: false)
+                }
+            }
+        }     
+        stage('Build bash-completion') {
+            steps {
+                sh 'make bash-completion'
+            }
+            post {
+                success {
+                    archiveArtifacts(artifacts: '*.txz', followSymlinks: false)
+                }
+            }
+        }     
+
+        
 
      }
 }

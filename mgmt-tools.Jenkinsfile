@@ -49,7 +49,7 @@ pipeline {
         
         stage('Build opentofu') {
             steps {
-                sh 'make opentofu'
+                sh 'PATH=$PATH:/opt/go/bin make opentofu'
             }
             post {
                 success {
