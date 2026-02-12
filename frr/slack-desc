@@ -1,0 +1,11 @@
+frr: frr (FRRouting, support for various routing protocols)
+frr:
+frr: FRR is free software that implements and manages various IPv4 and
+frr: IPv6 routing protocols. It runs on nearly all distributions of Linux
+frr: and BSD and supports all modern CPU architectures.
+frr: FRR currently supports the following protocols:
+frr: - BGP          - RIPng         - Babel             - NHRP (alpha)
+frr: - OSPFv2       - IS-IS         - PBR
+frr: - OSPFv3       - PIM-SM/MSDP   - OpenFabric
+frr: - RIPv1        - LDP           - VRRP
+frr: - RIPv2        - BFD           - EIGRP (alpha)
