@@ -44,7 +44,7 @@ pipeline {
         
         stage('Build truenas_incus_ctl') {
             steps {
-                sh 'make truenas_incus_ctl'
+                sh 'PATH=$PATH:/opt/go/bin make truenas_incus_ctl'
             }
             post {
                 success {
