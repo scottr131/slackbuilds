@@ -1,0 +1,11 @@
+open-iscsi: open-iscsi (an implementation of the iSCSI protocol)
+open-iscsi:
+open-iscsi: The Open-iSCSI project is a high-performance, transport independent,
+open-iscsi: multi-platform implementation of RFC3720 iSCSI.
+open-iscsi:
+open-iscsi: Open-iSCSI is partitioned into user and kernel parts. The kernel 
+open-iscsi: portion of Open-iSCSI is built into the linux kernel itself. 
+open-iscsi:
+open-iscsi: The user space Open-iSCSI consists of a daemon process called
+open-iscsi: iscsid, and a management utility iscsiadm. There are also helper
+open-iscsi: programs, and iscsiuio, which is used for certain iSCSI adapters.
