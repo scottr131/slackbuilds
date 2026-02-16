@@ -88,6 +88,7 @@ find -L . \
 ./gradlew assemble
 tar -xf build/distributions/$PRGNAM-$VERSION.tar -C $PKG
 mkdir -p $PKG/usr/share
+mkdir -p $PKG/var/log/linstor
 mv $PKG/$PRGNAM-$VERSION $PKG/usr/share/$PRGNAM
 
 # Don't ship .la files:
