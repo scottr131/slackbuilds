@@ -1,4 +1,4 @@
-xrdp: xrd (an open source RDP server)
+xrdp: xrdp (an open source RDP server)
 xrdp:
 xrdp: **xrdp** provides a graphical login to remote machines using Microsoft
 xrdp: Remote Desktop Protocol (RDP). xrdp accepts connections from a variety of RDP clients:
