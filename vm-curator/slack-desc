@@ -1,0 +1,11 @@
+vm-curator: vm-curator (a TUI for managing QEMU/KVM virtual machines)
+vm-curator:
+vm-curator: A fast and friendly Rust TUI for managing desktop QEMU/KVM virtual
+vm-curator: machines — with 3D acceleration, GPU passthrough, VM import, and 
+vm-curator: 120+ pre-configured OS profiles!
+vm-curator:
+vm-curator:
+vm-curator:
+vm-curator:
+vm-curator:
+vm-curator:
