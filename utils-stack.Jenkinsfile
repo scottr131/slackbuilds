@@ -78,6 +78,18 @@ pipeline {
                 }
             }
         }     
+        
+        stage('Build vtm') {
+            steps {
+                sh 'make vtm'
+            }
+            post {
+                success {
+                    archiveArtifacts(artifacts: '*.txz', followSymlinks: false)
+                }
+            }
+        }     
+
 
         
 
