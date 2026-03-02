@@ -1,0 +1,11 @@
+buildah: buildah (a tool that facilitates building OCI container images)
+buildah:
+buildah: The Buildah package provides a command line tool that can be used to
+buildah: * create a working container, from scratch or using an image
+buildah: * create an image, from a working container or via a Dockerfile
+buildah: * mount a working container's root filesystem for manipulation
+buildah: * unmount a working container's root filesystem
+buildah: * delete a working container or an image
+buildah: * rename a local container
+buildah:
+buildah: Images can be built in the OCI format or the traditional docker format
