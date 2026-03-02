@@ -1,0 +1,11 @@
+podman: podman (a tool for managing OCI containers and pods)
+podman:
+podman: Podman (the POD MANager) is a tool for managing containers and 
+podman: images, volumes mounted into those containers, and pods made from
+podman: groups of containers. Podman runs containers on Linux, but can also 
+podman: be used on Mac and Windows systems using a Podman-managed virtual 
+podman: machine. Podman is based on libpod, a library for container lifecycle 
+podman: management that is also contained in this repository. The libpod 
+podman: library provides APIs for managing containers, pods, container 
+podman: images, and volumes.
+podman:
