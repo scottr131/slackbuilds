@@ -17,7 +17,7 @@
 cd $(dirname $0) ; CWD=$(pwd)
 
 PRGNAM=temurin-jdk21
-VERSION=21.0.10+7
+VERSION=21.0.11+10
 BUILD=1
 TAG=${TAG:-_SBo}		# the "_SBo" is required
 PKGTYPE=${PKGTYPE:-tgz}
