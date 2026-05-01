@@ -10,7 +10,7 @@ pipeline {
     }
 
     stages {
-        
+/* == DEPRICATED WITH SLACKWARE-CURRENT ==       
         stage("Pull build scripts") {
             steps {
                 git url: "https://github.com/scottr131/slackbuilds.git", branch: "main"
@@ -70,7 +70,7 @@ pipeline {
                 sh "source spice/spice.info; sudo installpkg spice-\${VERSION}-\${ARCH}-\${BUILD}\${TAG}.\${PKGTYPE};"
             }
         }
-
+  */
         stage("Build libblkio") {
             steps {
                 sh "make libblkio"
