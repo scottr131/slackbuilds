@@ -23,7 +23,8 @@ TARGETS     := \
 	containerd cri-tools cni-plugins runc \
 	kubernetes nerdctl fresh bat btop glow libwebsockets \
 	libtelnet ufw xrdp xorgxrdp frr libyang4 etcd \
-	open-isns open-iscsi truenas_incus_ctl vm-curator
+	open-isns open-iscsi truenas_incus_ctl vm-curator \
+	cloud-init lazygit
 
 BZ2TARGETS     := \
 	libblkio
