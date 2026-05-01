@@ -1,0 +1,11 @@
+temurin-jdk25: temurin-jdk25 (Eclipse Temurin OpenJDK25)
+temurin-jdk25:
+temurin-jdk25: The binaries of the Eclipse Temurin JDK as distributed. Packaged for
+temurin-jdk25: installation into /opt on Slackware.
+temurin-jdk25:
+temurin-jdk25:
+temurin-jdk25:
+temurin-jdk25:
+temurin-jdk25:
+temurin-jdk25:
+temurin-jdk25:
