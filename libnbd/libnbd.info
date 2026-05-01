@@ -1,5 +1,5 @@
 PRGNAM="libnbd"
-VERSION="1.24.0"
+VERSION="1.24.2"
 HOMEPAGE=""
 DOWNLOAD="https://download.libguestfs.org/libnbd/1.24-stable/libnbd-1.24.0.tar.gz"
 MD5SUM=""
