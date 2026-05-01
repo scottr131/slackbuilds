@@ -80,7 +80,7 @@ find -L . \
 
 mkdir -p $PKG/opt/$PRGNAM-$VERSION
 cp -R . $PKG/opt/$PRGNAM-$VERSION
-ln -s $PKG/opt/$PRGNAM-$VERSION $PKG/opt/go
+ln -s /opt/$PRGNAM-$VERSION $PKG/opt/go
 
 # Don't ship .la files:
 rm -f $PKG/{,usr/}lib${LIBDIRSUFFIX}/*.la
