@@ -91,6 +91,16 @@ pipeline {
             }
         }    
 
+        stage('Build zfs') {
+            steps {
+                sh 'make zfs'
+            }
+            post {
+                success {
+                    archiveArtifacts artifacts: '*.txz', followSymlinks: false
+                }
+            }
+        }
 
 
     }
