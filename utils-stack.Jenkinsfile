@@ -78,7 +78,7 @@ pipeline {
                 }
             }
         }     
-        
+/*        
         stage('Build vtm') {
             steps {
                 sh 'make vtm'
@@ -89,7 +89,7 @@ pipeline {
                 }
             }
         }     
-
+*/
 
         
 
