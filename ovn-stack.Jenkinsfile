@@ -30,7 +30,7 @@ pipeline {
             }
         }        
 
-
+/*
         stage('Build protobuf-c') {
             steps {
                 sh 'make protobuf-c'
@@ -47,7 +47,6 @@ pipeline {
             }
         }       
 
-/* Test without libyang
         stage('Build libyang') {
             steps {
                 sh 'make libyang'
