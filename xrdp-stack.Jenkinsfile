@@ -32,7 +32,7 @@ pipeline {
     
         stage("Install xrdp") {
             steps {
-                sh "source xrdp/xrpd.info; sudo installpkg xrdp-\${VERSION}-\${ARCH}-\${BUILD}\${TAG}.\${PKGTYPE};"
+                sh "source xrdp/xrdp.info; sudo installpkg xrdp-\${VERSION}-\${ARCH}-\${BUILD}\${TAG}.\${PKGTYPE};"
             }
         }
         
