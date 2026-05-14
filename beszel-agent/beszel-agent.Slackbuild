@@ -26,7 +26,7 @@ cd $(dirname $0) ; CWD=$(pwd)
 
 PRGNAM=beszel
 VERSION=0.18.7
-BUILD=1
+BUILD=2
 TAG=${TAG:-_SBo}		# the "_SBo" is required
 PKGTYPE=${PKGTYPE:-tgz}
 
@@ -91,6 +91,8 @@ mkdir -p $PKG/usr/local/bin
 cp build/${PRGNAM}* $PKG/usr/local/bin
 mkdir -p $PKG/etc/rc.d
 cp $CWD/rc.beszel-agent $PKG/etc/rc.d
+mkdir -p $PKG/etc/default
+cp $CWD/beszel-agent $PKG/etc/default
 
 # Don't ship .la files:
 rm -f $PKG/{,usr/}lib${LIBDIRSUFFIX}/*.la
