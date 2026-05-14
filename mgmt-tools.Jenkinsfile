@@ -38,7 +38,7 @@ pipeline {
 
         stage('Build beszel-agent') {
             steps {
-                sh 'make beszel-agent'
+                sh 'PATH=/opt/go/bin:$PATH make beszel-agent'
             }
             post {
                 success {
