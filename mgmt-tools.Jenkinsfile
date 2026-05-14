@@ -36,6 +36,18 @@ pipeline {
             }
         }     
 
+        stage('Build beszel-agent') {
+            steps {
+                sh 'make beszel-agent'
+            }
+            post {
+                success {
+                    archiveArtifacts(artifacts: '*.txz', followSymlinks: false)
+                }
+            }
+        }     
+
+/*
         stage('Build rundeck') {
             steps {
                 sh 'make rundeck'
@@ -46,7 +58,8 @@ pipeline {
                 }
             }
         }     
-        
+*/
+      
         stage('Build opentofu') {
             steps {
                 sh 'PATH=$PATH:/opt/go/bin make opentofu'
