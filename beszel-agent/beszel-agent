@@ -1,0 +1,18 @@
+# Define options for the Beszel Agent 
+#
+# You need to define at least these
+# These are obtained from the Beszel server
+#
+# BESZEL_AGENT_KEY 	Beszel SSH key
+# BESZEL_AGENT_TOKEN	Beszel authentication token
+#
+# You can also specify additional options 
+#
+# -listen	Address and/or port to listen on
+#
+# For other available options, see the Beszel documentation,
+# or run "beszel-agent_linux_amd64 --help"
+
+BESZEL_AGENT_KEY=""
+BESZEL_AGENT_TOKEN=""
+BESZEL_AGENT_OPTS="--listen 45876"

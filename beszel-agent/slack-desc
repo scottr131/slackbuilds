@@ -1,0 +1,11 @@
+beszel-agent: beszel-agent (local agent for the Beszel server monitoring platform)
+beszel-agent:
+beszel-agent: Beszel is a lightweight server monitoring platform that includes 
+beszel-agent: Docker statistics, historical data, and alert functions.
+beszel-agent:
+beszel-agent: It has a friendly web interface, simple configuration, and is ready 
+beszel-agent: to use out of the box. It supports automatic backup, multi-user,
+beszel-agent: OAuth authentication, and API access.
+beszel-agent:
+beszel-agent: This package contains the local agent that reports statistics back to
+beszel-agent: the Beszel server.  It does not contain the server component.

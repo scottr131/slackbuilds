@@ -1,0 +1,41 @@
+#!/bin/sh
+# /etc/rc.d/rc.beszel-agent - start/stop the Beszel agent
+
+# To change the default options, edit /etc/default/atd.
+if [ -r /etc/default/beszel-agent ]; then
+  . /etc/default/beszel-agent
+fi
+
+start_beszel_agent() {
+  if ! /usr/bin/pgrep --ns $$ -f "^/usr/local/bin/beszel-agent_linux_amd64" 1> /dev/null 2> /dev/null ; then
+    if [ -x /usr/local/bin/beszel-agent_linux_amd64 ]; then
+      echo "Starting beszel-agent:  /usr/local/bin/beszel-agent_linux_amd64 ${BESZEL_AGENT_OPTS}"
+      /usr/local/bin/beszel-agent_linux_amd64 --key "$BESZEL_AGENT_KEY" --token "$BESZEL_AGENT_TOKEN" $BESZEL_AGENT_OPTS > /var/log/beszel-agent 2>&1 &
+    fi
+  fi
+}
+
+stop_beszel_agent() {
+  echo "Stopping beszel-agent."
+  /bin/killall -TERM /usr/local/bin/beszel-agent
+}
+
+restart_beszel_agent() {
+  stop_beszel_agent
+  sleep 1
+  start_beszel_agent
+}
+
+case "$1" in
+'start')
+  start_beszel_agent
+  ;;
+'stop')
+  stop_beszel_agent
+  ;;
+'restart')
+  restart_beszel_agent
+  ;;
+*)
+  echo "usage $0 start|stop|restart"
+esac
