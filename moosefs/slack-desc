@@ -1,0 +1,11 @@
+moosefs: MooseFS (a petabyte distributed file system)
+moosefs:
+moosefs: MooseFS is a Petabyte Open Source Network Distributed File System.
+moosefs: It is easy to deploy and maintain, highly reliable, fault tolerant,
+moosefs: highly performing, easily scalable and POSIX compliant.
+moosefs:
+moosefs: MooseFS spreads data over a number of commodity servers, which are
+moosefs: visible to the user as one resource. For standard file operations
+moosefs: MooseFS acts like an ordinary Unix-like file system.
+moosefs:
+moosefs:
