@@ -1,0 +1,11 @@
+iperf: iperf (a tool for measurement of bandwidth on IP networks)
+iperf:
+iperf: iperf is a tool for active measurement of the maximum achievable
+iperf: bandwidth on IP networks.  It supports tuning of various parameters
+iperf: related to timing, protocols, and buffers.  For each test it reports
+iperf: the measured throughput / bitrate, loss, and other parameters.
+iperf:
+iperf:
+iperf:
+iperf:
+iperf:
