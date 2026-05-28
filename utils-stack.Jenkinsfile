@@ -36,7 +36,7 @@ pipeline {
             }
         }     
 
-        stage('Build btop') {
+/*        stage('Build btop') {
             steps {
                 sh 'make btop'
             }
@@ -46,6 +46,7 @@ pipeline {
                 }
             }
         }     
+*/
 
         stage('Build fresh') {
             steps {
