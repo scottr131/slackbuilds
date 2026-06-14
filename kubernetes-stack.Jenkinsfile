@@ -16,7 +16,7 @@ pipeline {
         
         stage('Build containerd') {
             steps {
-                sh 'make containerd'
+                sh 'PATH=$PATH:/opt/go/bin make containerd'
             }
             post {
                 success {
@@ -28,7 +28,7 @@ pipeline {
 
         stage('Build cri-tools') {
             steps {
-                sh 'make cri-tools'
+                sh 'PATH=$PATH:/opt/go/bin make cri-tools'
             }
             post {
                 success {
@@ -40,7 +40,7 @@ pipeline {
 
         stage('Build cni-plugins') {
             steps {
-                sh 'make cni-plugins'
+                sh 'PATH=$PATH:/opt/go/bin make cni-plugins'
             }
             post {
                 success {
@@ -53,7 +53,7 @@ pipeline {
 
         stage("Build runc") {
             steps {
-                sh 'make runc'
+                sh 'PATH=$PATH:/opt/go/bin make runc'
             }
             post {
                 success {
@@ -64,7 +64,7 @@ pipeline {
 
         stage("Build kubernetes") {
             steps {
-                sh 'make kubernetes'
+                sh 'PATH=$PATH:/opt/go/bin make kubernetes'
             }
             post {
                 success {
@@ -75,7 +75,7 @@ pipeline {
 
         stage("Build nerdctl") {
             steps {
-                sh 'make nerdctl'
+                sh 'PATH=$PATH:/opt/go/bin make nerdctl'
             }
             post {
                 success {
