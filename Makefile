@@ -17,7 +17,7 @@ TARGETS     := \
 	ceph swtpm libtpms rabbitmq-c librdkafka libyang3 \
 	ovn raft cowsql skopeo temurin-jdk11 ansible \
 	glances rundeck temurin-jdk17 temurin-jdk21 \
-	temurin-jdk25 \
+	temurin-jdk25 buildah \
 	thin-provisioning-tools opentofu \
 	incus-ui-canonical garage prometheus \
 	asciinema virtiofsd lighthttpd vtm \
