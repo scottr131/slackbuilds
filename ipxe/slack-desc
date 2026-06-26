@@ -1,0 +1,11 @@
+ipxe: ipxe (open source network boot firmware)
+ipxe:
+ipxe: iPXE is the leading open source network boot firmware. It provides a
+ipxe: full PXE implementation enhanced with additional features such as 
+ipxe: booting from a web server via HTTP or HTTPS, booting from an iSCSI,
+ipxe: FCoE, or AoE SAN, controlling the boot process with a script, and
+ipxe: creating interactive forms and menus.
+ipxe:
+ipxe: You can use iPXE to replace the existing PXE ROM on your network 
+ipxe: card, or you can chainload into iPXE to obtain the features of iPXE
+ipxe: without the hassle of reflashing.
