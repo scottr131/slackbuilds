@@ -1,0 +1,11 @@
+libpathrs: libpathrs (a set of C-friendly APIs for path resolution)
+libpathrs:
+libpathrs: This library implements a set of C-friendly APIs (written in Rust) to
+libpathrs: make path resolution within a potentially-untrusted directory safe on
+libpathrs: GNU/Linux. [Thereare countless examples of security vulnerabilities
+libpathrs: caused by bad handling of paths][avoidable-issues]; this library
+libpathrs: provides an easy-to-use set of VFS APIs to avoid those kinds of
+libpathrs: issues.
+libpathrs:
+libpathrs:
+libpathrs:
