@@ -18,7 +18,7 @@ TARGETS     := \
 	ovn raft cowsql skopeo temurin-jdk11 ansible \
 	glances rundeck temurin-jdk17 temurin-jdk21 \
 	temurin-jdk25 buildah vcs_versioning \
-	thin-provisioning-tools opentofu \
+	thin-provisioning-tools opentofu ipxe \
 	incus-ui-canonical garage prometheus \
 	asciinema virtiofsd lighthttpd vtm \
 	containerd cri-tools cni-plugins runc \
