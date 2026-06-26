@@ -86,20 +86,17 @@ find -L . \
 
 CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
-make -j ${BLDTHREADS:-1}
+make everything -j ${BLDTHREADS:-1}
+make bin-x86_64-efi/snponly.efi -j ${BLDTHREADS:-1}
+make bin-i386-efi/snponly.efi -j ${BLDTHREADS:-1}
 
 # Copy the binaries
 mkdir -p $PKG/usr/share/$PRGNAM
 
-cp bin/blib.a bin/ipxe.dsk bin/ipxe.lkrn bin/ipxe.iso \
-   bin/ipxe.usb bin/ipxe.pxe bin/undionly.kpxe bin/rtl8139.rom \
-   bin/8086100e.mrom bin/80861209.rom bin/10500940.rom \
-   bin/10222000.rom bin/10ec8139.rom bin/1af41000.rom \
-   bin/8086100f.mrom bin/808610d3.mrom bin/15ad07b0.rom \
-   $PKG/usr/share/$PRGNAM
+find . -type f -path './bin*/*' -regextype posix-extended -regex \
+ '.*\.(pxe|efi|kpxe|kkpxe|lkrn|iso|hd|dsk|pdsk|usb|vhd|raw|rom|mrom|pcirom|isarom|efidrv|efirom|linux)$' \
+ -exec cp --parents -t $PKG/usr/share/ipxe {} \;
   
-# mkdir -p $PKG/usr/bin
-# cp -R $PRGNAM $PKG/usr/bin
 # Don't ship .la files:
 rm -f $PKG/{,usr/}lib${LIBDIRSUFFIX}/*.la
 
