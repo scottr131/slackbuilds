@@ -90,6 +90,13 @@ if ! command -v yarn >/dev/null 2>&1; then
   exit 1
 fi
 
+# Make a fake git repository to make the build system happy
+git init
+git config user.email "SBo"
+git config user.name "SBo"
+git add README.md
+git commit -m "SBo"
+
 yarn install
 yarn build
 
