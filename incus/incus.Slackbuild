@@ -114,7 +114,7 @@ cp ~/go/bin/incusd $PKG/usr/sbin/
 cp ~/go/bin/incus-agent $PKG/usr/sbin/
 cp ~/go/bin/incus-migrate $PKG/usr/sbin/
 cp ~/go/bin/incus-user $PKG/usr/sbin/
-cp ~/go/bin/lxd-to-incus $PKG/usr/sbin/
+#cp ~/go/bin/lxd-to-incus $PKG/usr/sbin/
 
 # Don't ship .la files:
 rm -f $PKG/{,usr/}lib${LIBDIRSUFFIX}/*.la
