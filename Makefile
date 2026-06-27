@@ -20,7 +20,7 @@ TARGETS     := \
 	temurin-jdk25 buildah vcs_versioning \
 	thin-provisioning-tools opentofu ipxe \
 	incus-ui-canonical garage prometheus \
-	asciinema virtiofsd lighthttpd vtm \
+	asciinema virtiofsd lighthttpd vtm libpathrs \
 	containerd cri-tools cni-plugins runc \
 	kubernetes nerdctl fresh bat btop glow libwebsockets \
 	libtelnet ufw xrdp xorgxrdp frr libyang4 etcd \
