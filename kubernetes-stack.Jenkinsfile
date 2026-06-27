@@ -48,8 +48,25 @@ pipeline {
                 }
             }
         }        
-        
 
+   
+        stage("Build libpathrs") {
+            steps {
+                sh 'make libpathrs'
+            }
+            post {
+                success {
+                    archiveArtifacts artifacts: '*.txz', followSymlinks: false
+                }
+            }
+        }             
+        
+        stage("Install libpathrs") {
+            steps {
+                sh "source libpathrs/libpathrs.info; sudo installpkg libpathrs-\${VERSION}-\${ARCH}-\${BUILD}\${TAG}.\${PKGTYPE};"
+            }
+        }
+        
 
         stage("Build runc") {
             steps {
