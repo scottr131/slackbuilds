@@ -6,7 +6,7 @@ pipeline {
         ARCH = "x86_64"
         TAG = "_SBo"
         BUILD = "1"
-        JAVA_HOME = "/opt/java17"
+        JAVA_HOME = "/opt/java25"
     }
     stages {
         stage('Pull build scripts') {
