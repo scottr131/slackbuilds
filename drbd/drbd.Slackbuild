@@ -2,7 +2,7 @@
 
 # Slackware build script for drbd
 
-# Copyright 2025 insane131 
+# Copyright 2026
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -25,7 +25,7 @@
 cd $(dirname $0) ; CWD=$(pwd)
 
 PRGNAM=drbd
-VERSION=9.3.3-rc.1
+VERSION=9.3.3
 BUILD=1
 TAG=${TAG:-_SBo}		# the "_SBo" is required
 PKGTYPE=${PKGTYPE:-tgz}
