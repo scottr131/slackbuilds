@@ -1,0 +1,14 @@
+diff -ruN cryptography-49.0.0/Cargo.toml cryptography-49.0.0-subint/Cargo.toml
+--- cryptography-49.0.0/Cargo.toml	2026-07-17 16:43:32.425397825 -0400
++++ cryptography-49.0.0-subint/Cargo.toml	2026-07-17 16:45:31.069659250 -0400
+@@ -30,8 +30,8 @@
+ openssl = "0.10.80"
+ openssl-sys = "0.9.116"
+ pem = { version = "3", default-features = false }
+-pyo3 = { version = "0.29", features = ["abi3"] }
+-pyo3-build-config = { version = "0.29" }
++pyo3 = { version = "0.29", features = ["abi3", "unsafe-allow-subinterpreters" ], path="/tmp/SBo/pyo3-subint-0.29.0" }
++pyo3-build-config = { version = "0.29", path="/tmp/SBo/pyo3-subint-0.29.0/pyo3-build-config" }
+ self_cell = "1"
+ 
+ [profile.release]
