@@ -80,6 +80,7 @@ pipeline {
             }
         }        
 
+/* Slackware-current 7-11-2026 now includes this
         stage('Build thin-provisioning-tools') {
             steps {
                 sh 'make thin-provisioning-tools'
@@ -89,7 +90,8 @@ pipeline {
                     archiveArtifacts(artifacts: '*.txz', followSymlinks: false)
                 }
             }
-        }    
+        }  
+*/
 
         stage('Build zfs') {
             steps {
