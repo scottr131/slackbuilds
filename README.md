@@ -5,7 +5,7 @@ These are slackbuild files for various programs on Slackware.  These should prod
 #### Management Tools Stack
 - ansible
 - glances
-- rundeck
+- rundeck (deprecated from stack)
 - opentofu
 
 #### Utilities Stack
@@ -32,9 +32,9 @@ These are slackbuild files for various programs on Slackware.  These should prod
 - nerdctl
 
 #### Qemu Stack 
-- usbredir (depricated, now included with Slackware-current)
-- spice-protocol (depricated, now included with Slackware-current)
-- spice (depricated, now included with Slackware-current, `spice-protocol` must be installed prior to build)
+- usbredir (depricated from stack, now included with Slackware-current)
+- spice-protocol (depricated from stack, now included with Slackware-current)
+- spice (depricated from stack, now included with Slackware-current, `spice-protocol` must be installed prior to build)
 - libblkio
 - libiscsi
 - numactl
@@ -57,7 +57,7 @@ These are slackbuild files for various programs on Slackware.  These should prod
 - cowsql (`raft` must be installed prior to build)
 - incus (all packages above must be installed prior to build)
 - skopeo
-- incus-
+- incus-ui-canonical
 
 #### Storage Stack
 - linstor-server
@@ -65,13 +65,11 @@ These are slackbuild files for various programs on Slackware.  These should prod
 - linstor_client
 - drbd
 - drbd-utils
-- thin-provisioning-tools
+- thin-provisioning-tools (depricated from stack, now included with Slackware-current)
 - zfs
 
 #### Open Virtual Network (OVN) / Open vSwitch (OVS) Stack
 - openvswitch
-- protobuf
-- libyang
 - ovn
 		
 #### XRDP Stack
