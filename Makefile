@@ -25,7 +25,8 @@ TARGETS     := \
 	kubernetes nerdctl fresh bat btop glow libwebsockets \
 	libtelnet ufw xrdp xorgxrdp frr libyang4 etcd \
 	open-isns open-iscsi truenas_incus_ctl vm-curator \
-	cloud-init lazygit beszel-agent moosefs restic iperf
+	cloud-init lazygit beszel-agent moosefs restic iperf \
+	llama.cpp
 
 BZ2TARGETS     := \
 	libblkio
