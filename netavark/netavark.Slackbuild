@@ -88,8 +88,8 @@ CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
 make -j ${BLDTHREADS:-1}
 # Copy the binaries
-mkdir -p $PKG/usr/local/bin
-cp -R bin/* $PKG/usr/local/bin
+mkdir -p $PKG/usr/libexec/podman/
+cp -R bin/* $PKG/usr/libexec/podman/
 # Don't ship .la files:
 rm -f $PKG/{,usr/}lib${LIBDIRSUFFIX}/*.la
 
