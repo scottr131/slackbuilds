@@ -46,7 +46,7 @@ pipeline {
 
         stage('Build go-md2man') {
             steps {
-                sh 'PATH=$PATH:/opt/go/bin make incus'
+                sh 'PATH=$PATH:/opt/go/bin make go-md2man'
             }
             post {
                 success {
