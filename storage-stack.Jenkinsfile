@@ -93,6 +93,17 @@ pipeline {
         }  
 */
 
+        stage('Build thin-send-recv') {
+            steps {
+                sh 'make thin-send-recv'
+            }
+            post {
+                success {
+                    archiveArtifacts artifacts: '*.txz', followSymlinks: false
+                }
+            }
+        }
+
         stage('Build zfs') {
             steps {
                 sh 'make zfs'
