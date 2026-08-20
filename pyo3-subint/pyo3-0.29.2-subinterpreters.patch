@@ -1,0 +1,30 @@
+diff -ruN pyo3-0.29.0/Cargo.toml pyo3-0.29.0-patched/Cargo.toml
+--- pyo3-0.29.0/Cargo.toml	2026-06-11 14:48:26.000000000 -0400
++++ pyo3-0.29.0-patched/Cargo.toml	2026-07-17 16:18:21.470522771 -0400
+@@ -158,6 +158,9 @@
+ # Optimizes PyObject to Vec conversion and so on.
+ nightly = []
+ 
++# Disables the checks for use in subinterpreters.  This is needed for bcrypt for Ceph.
++unsafe-allow-subinterpreters = []
++
+ # Activates all additional features
+ # This is mostly intended for testing purposes - activating *all* of these isn't particularly useful.
+ full = [
+diff -ruN pyo3-0.29.0/src/impl_/pymodule.rs pyo3-0.29.0-patched/src/impl_/pymodule.rs
+--- pyo3-0.29.0/src/impl_/pymodule.rs	2026-06-11 14:48:26.000000000 -0400
++++ pyo3-0.29.0-patched/src/impl_/pymodule.rs	2026-07-17 16:17:08.374384236 -0400
+@@ -135,10 +135,12 @@
+         // that static data is not reused across interpreters.
+         //
+         // PyPy does not have subinterpreters, so no need to check interpreter ID.
++        // Also bypass this check if the feature is specifically enabled.  This is needed
++        // for bcrypt for Ceph.
+         //
+         // TODO: it should be possible to use the Py_mod_multiple_interpreters slot on sufficiently
+         // new Python versions to remove the need for this custom logic
+-        #[cfg(not(any(PyPy, GraalPy)))]
++        #[cfg(not(any(PyPy, GraalPy, feature = "unsafe-allow-subinterpreters")))]
+         {
+             // PyInterpreterState_Get is only available on 3.9 and later, but is missing
+             // from python3.dll for Windows stable API on 3.9
