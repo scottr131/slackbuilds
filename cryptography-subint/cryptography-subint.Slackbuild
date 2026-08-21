@@ -25,8 +25,8 @@
 cd $(dirname $0) ; CWD=$(pwd)
 
 PRGNAM=cryptography
-VERSION=49.0.0
-GITCOMMIT=e300bbe
+VERSION=50.0.0
+GITCOMMIT=dcb7050
 BUILD=1
 TAG=${TAG:-_SBo}		# the "_SBo" is required
 PKGTYPE=${PKGTYPE:-tgz}
