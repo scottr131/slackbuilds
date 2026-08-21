@@ -6,7 +6,7 @@ diff -ruN bcrypt-5.0.0/src/_bcrypt/Cargo.toml bcrypt-5.0.0-subint/src/_bcrypt/Ca
  
  [dependencies]
 -pyo3 = { version = "0.26", features = ["abi3"] }
-+pyo3 = { version = "0.29", features = ["abi3", "unsafe-allow-subinterpreters" ], path="/tmp/SBo/pyo3-subint-0.29.0" }
++pyo3 = { version = "0.29.2", features = ["abi3", "unsafe-allow-subinterpreters" ], path="/tmp/SBo/pyo3-subint-0.29.2" }
  bcrypt = "0.17"
  bcrypt-pbkdf = "0.10.0"
  base64 = "0.22.1"
