@@ -123,7 +123,7 @@ pipeline {
             }
         }
 
-
+/*
 
         stage("Build libtpms") {
             steps {
@@ -159,6 +159,7 @@ pipeline {
                 sh "source swtpm/swtpm.info; sudo installpkg swtpm-\${VERSION}-\${ARCH}-\${BUILD}\${TAG}.\${PKGTYPE};"
             }
         }        
+*/
         
         stage("Build qemu") {
             steps {
