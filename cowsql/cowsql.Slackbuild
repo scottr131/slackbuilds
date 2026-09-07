@@ -87,7 +87,8 @@ find -L . \
 
 autoreconf -i
 
-CFLAGS="$SLKCFLAGS" \
+# CFLAGS hack to compile under newer glibc
+CFLAGS="$SLKCFLAGS -Wno-error=discarded-qualifiers" \
 CXXFLAGS="$SLKCFLAGS" \
 ./configure \
   --prefix=/usr \

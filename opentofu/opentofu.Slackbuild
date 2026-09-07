@@ -84,7 +84,8 @@ find -L . \
  \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
   -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
 
-make build
+#make build
+/opt/go/bin/go build -ldflags "-X main.version=$(git describe --tags --always --dirty)" -tags http2legacy ./cmd/tofu
 mkdir -p $PKG/usr/bin
 cp tofu $PKG/usr/bin/
 # Don't ship .la files:
