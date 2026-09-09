@@ -1,0 +1,159 @@
+diff -ruN ceph-20.1.1/cmake/modules/BuildArrow.cmake ceph-20.1.1-patched/cmake/modules/BuildArrow.cmake
+--- ceph-20.1.1/cmake/modules/BuildArrow.cmake	2025-10-02 13:29:29.000000000 -0400
++++ ceph-20.1.1-patched/cmake/modules/BuildArrow.cmake	2026-09-09 12:30:11.703982642 -0400
+@@ -4,6 +4,8 @@
+   # only enable the parquet component
+   set(arrow_CMAKE_ARGS -DARROW_PARQUET=ON)
+ 
++  list(APPEND arrow_CMAKE_ARGS -DCMAKE_POLICY_VERSION_MINIMUM=3.5)
++
+   # only use preinstalled dependencies for arrow, don't fetch/build any
+   list(APPEND arrow_CMAKE_ARGS -DARROW_DEPENDENCY_SOURCE=SYSTEM)
+ 
+diff -ruN ceph-20.1.1/cmake/modules/BuildOpentelemetry.cmake ceph-20.1.1-patched/cmake/modules/BuildOpentelemetry.cmake
+--- ceph-20.1.1/cmake/modules/BuildOpentelemetry.cmake	2025-10-02 13:29:29.000000000 -0400
++++ ceph-20.1.1-patched/cmake/modules/BuildOpentelemetry.cmake	2026-09-09 12:30:11.704147200 -0400
+@@ -10,6 +10,7 @@
+   set(opentelemetry_BINARY_DIR "${CMAKE_CURRENT_BINARY_DIR}/opentelemetry-cpp")
+   set(opentelemetry_cpp_targets opentelemetry_trace opentelemetry_exporter_jaeger_trace)
+   set(opentelemetry_CMAKE_ARGS -DCMAKE_POSITION_INDEPENDENT_CODE=ON
++                               -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+                                -DWITH_JAEGER=ON
+                                -DBUILD_TESTING=OFF
+                                -DCMAKE_BUILD_TYPE=Release
+diff -ruN ceph-20.1.1/cmake/modules/BuildUtf8proc.cmake ceph-20.1.1-patched/cmake/modules/BuildUtf8proc.cmake
+--- ceph-20.1.1/cmake/modules/BuildUtf8proc.cmake	2025-10-02 13:29:29.000000000 -0400
++++ ceph-20.1.1-patched/cmake/modules/BuildUtf8proc.cmake	2026-09-09 12:30:11.704262230 -0400
+@@ -4,6 +4,8 @@
+   # only build static version
+   list(APPEND utf8proc_CMAKE_ARGS -DBUILD_SHARED_LIBS=OFF)
+ 
++  list(APPEND utf8proc_CMAKE_ARGS -DCMAKE_POLICY_VERSION_MINIMUM=3.5)
++
+   # cmake doesn't properly handle arguments containing ";", such as
+   # CMAKE_PREFIX_PATH, for which reason we'll have to use some other separator.
+   string(REPLACE ";" "!" CMAKE_PREFIX_PATH_ALT_SEP "${CMAKE_PREFIX_PATH}")
+diff -ruN ceph-20.1.1/cmake/modules/BuildZstd.cmake ceph-20.1.1-patched/cmake/modules/BuildZstd.cmake
+--- ceph-20.1.1/cmake/modules/BuildZstd.cmake	2025-10-02 13:29:29.000000000 -0400
++++ ceph-20.1.1-patched/cmake/modules/BuildZstd.cmake	2026-09-09 12:30:11.704348760 -0400
+@@ -10,6 +10,7 @@
+                -DCMAKE_C_FLAGS=${ZSTD_C_FLAGS}
+                -DCMAKE_AR=${CMAKE_AR}
+                -DCMAKE_POSITION_INDEPENDENT_CODE=${ENABLE_SHARED}
++               -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+     BINARY_DIR ${CMAKE_CURRENT_BINARY_DIR}/libzstd
+     BUILD_COMMAND ${CMAKE_COMMAND} --build <BINARY_DIR> --target libzstd_static
+     BUILD_BYPRODUCTS "${CMAKE_CURRENT_BINARY_DIR}/libzstd/lib/libzstd.a"
+diff -ruN ceph-20.1.1/src/arrow/cpp/cmake_modules/ThirdpartyToolchain.cmake ceph-20.1.1-patched/src/arrow/cpp/cmake_modules/ThirdpartyToolchain.cmake
+--- ceph-20.1.1/src/arrow/cpp/cmake_modules/ThirdpartyToolchain.cmake	2024-01-16 09:38:51.000000000 -0500
++++ ceph-20.1.1-patched/src/arrow/cpp/cmake_modules/ThirdpartyToolchain.cmake	2026-09-09 12:30:11.704673892 -0400
+@@ -2379,7 +2379,9 @@
+                       PREFIX "${CMAKE_BINARY_DIR}"
+                       URL ${XSIMD_SOURCE_URL}
+                       URL_HASH "SHA256=${ARROW_XSIMD_BUILD_SHA256_CHECKSUM}"
+-                      CMAKE_ARGS ${XSIMD_CMAKE_ARGS})
++                      CMAKE_ARGS
++                               -DCMAKE_POLICY_VERSION_MINIMUM=3.5
++                               ${XSIMD_CMAKE_ARGS})
+ 
+   set(XSIMD_INCLUDE_DIR "${XSIMD_PREFIX}/include")
+   # The include directory must exist before it is referenced by a target.
+diff -ruN ceph-20.1.1/src/arrow/python/cmake_modules/ThirdpartyToolchain.cmake ceph-20.1.1-patched/src/arrow/python/cmake_modules/ThirdpartyToolchain.cmake
+--- ceph-20.1.1/src/arrow/python/cmake_modules/ThirdpartyToolchain.cmake	2024-01-16 09:38:51.000000000 -0500
++++ ceph-20.1.1-patched/src/arrow/python/cmake_modules/ThirdpartyToolchain.cmake	2026-09-09 12:30:11.704673892 -0400
+@@ -2379,7 +2379,9 @@
+                       PREFIX "${CMAKE_BINARY_DIR}"
+                       URL ${XSIMD_SOURCE_URL}
+                       URL_HASH "SHA256=${ARROW_XSIMD_BUILD_SHA256_CHECKSUM}"
+-                      CMAKE_ARGS ${XSIMD_CMAKE_ARGS})
++                      CMAKE_ARGS
++                               -DCMAKE_POLICY_VERSION_MINIMUM=3.5
++                               ${XSIMD_CMAKE_ARGS})
+ 
+   set(XSIMD_INCLUDE_DIR "${XSIMD_PREFIX}/include")
+   # The include directory must exist before it is referenced by a target.
+diff -ruN ceph-20.1.1/src/mds/Locker.cc ceph-20.1.1-patched/src/mds/Locker.cc
+--- ceph-20.1.1/src/mds/Locker.cc	2025-10-02 13:29:29.000000000 -0400
++++ ceph-20.1.1-patched/src/mds/Locker.cc	2026-09-09 12:31:04.260469708 -0400
+@@ -4489,7 +4489,7 @@
+       dout(7) << "handle_client_lease client." << client << " renew on " << *dn
+ 	      << (!dn->lock.can_lease(client)?", revoking lease":"") << dendl;
+       if (dn->lock.can_lease(client)) {
+-        auto reply = make_message<MClientLease>(*m);
++        auto reply = ceph::make_message<MClientLease>(*m);
+ 	int pool = 1;   // fixme.. do something smart!
+ 	reply->h.duration_ms = (int)(1000 * mdcache->client_lease_durations[pool]);
+ 	reply->h.seq = ++l->seq;
+diff -ruN ceph-20.1.1/src/mds/MDCache.cc ceph-20.1.1-patched/src/mds/MDCache.cc
+--- ceph-20.1.1/src/mds/MDCache.cc	2025-10-02 13:29:29.000000000 -0400
++++ ceph-20.1.1-patched/src/mds/MDCache.cc	2026-09-09 12:32:15.261062377 -0400
+@@ -10535,7 +10535,7 @@
+ 
+ 
+   CInode *cur = 0;
+-  auto reply = make_message<MDiscoverReply>(*dis);
++  auto reply = ceph::make_message<MDiscoverReply>(*dis);
+ 
+   snapid_t snapid = dis->get_snapid();
+ 
+diff -ruN ceph-20.1.1/src/mds/Server.cc ceph-20.1.1-patched/src/mds/Server.cc
+--- ceph-20.1.1/src/mds/Server.cc	2025-10-02 13:29:29.000000000 -0400
++++ ceph-20.1.1-patched/src/mds/Server.cc	2026-09-09 12:31:55.224895118 -0400
+@@ -150,7 +150,7 @@
+       }
+     }
+     batch_reqs.clear();
+-    server->reply_client_request(mdr, make_message<MClientReply>(*mdr->client_request, r));
++    server->reply_client_request(mdr, ceph::make_message<MClientReply>(*mdr->client_request, r));
+   }
+   void print(std::ostream& o) const override {
+     o << "[batch front=" << *mdr << "]";
+@@ -2142,7 +2142,7 @@
+       dout(20) << __func__ << ": batch head " << *mdr << dendl;
+       mdr->release_batch_op()->respond(r);
+     } else {
+-     reply_client_request(mdr, make_message<MClientReply>(*mdr->client_request, r));
++     reply_client_request(mdr, ceph::make_message<MClientReply>(*mdr->client_request, r));
+     }
+   } else if (mdr->internal_op > -1) {
+     dout(10) << __func__ << ": completing with result " << cpp_strerror(r) << " on internal " << *mdr << dendl;
+@@ -2290,7 +2290,7 @@
+   }
+ 
+ 
+-  auto reply = make_message<MClientReply>(*req, 0);
++  auto reply = ceph::make_message<MClientReply>(*req, 0);
+   reply->set_unsafe();
+ 
+   // mark xlocks "done", indicating that we are exposing uncommitted changes.
+@@ -2632,7 +2632,7 @@
+ 	   req->get_op() != CEPH_MDS_OP_OPEN &&
+ 	   req->get_op() != CEPH_MDS_OP_CREATE)) {
+ 	dout(5) << "already completed " << req->get_reqid() << dendl;
+-        auto reply = make_message<MClientReply>(*req, 0);
++        auto reply = ceph::make_message<MClientReply>(*req, 0);
+ 	if (created != inodeno_t()) {
+ 	  bufferlist extra;
+ 	  set_reply_extra_bl(req, created, extra);
+diff -ruN ceph-20.1.1/src/rocksdb/db/blob/blob_file_meta.h ceph-20.1.1-patched/src/rocksdb/db/blob/blob_file_meta.h
+--- ceph-20.1.1/src/rocksdb/db/blob/blob_file_meta.h	2023-05-24 15:55:23.000000000 -0400
++++ ceph-20.1.1-patched/src/rocksdb/db/blob/blob_file_meta.h	2026-09-09 12:30:11.705010051 -0400
+@@ -10,6 +10,7 @@
+ #include <memory>
+ #include <string>
+ #include <unordered_set>
++#include <cstdint>
+ 
+ #include "rocksdb/rocksdb_namespace.h"
+ 
+diff -ruN ceph-20.1.1/src/rocksdb/include/rocksdb/trace_record.h ceph-20.1.1-patched/src/rocksdb/include/rocksdb/trace_record.h
+--- ceph-20.1.1/src/rocksdb/include/rocksdb/trace_record.h	2023-05-24 15:55:23.000000000 -0400
++++ ceph-20.1.1-patched/src/rocksdb/include/rocksdb/trace_record.h	2026-09-09 12:30:11.705141653 -0400
+@@ -8,6 +8,7 @@
+ #include <memory>
+ #include <string>
+ #include <vector>
++#include <cstdint>
+ 
+ #include "rocksdb/rocksdb_namespace.h"
+ #include "rocksdb/slice.h"
