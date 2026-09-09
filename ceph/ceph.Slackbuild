@@ -85,7 +85,7 @@ chown -R root:root .
 #  -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
 
 patch -p1 < $CWD/ceph-20.1.1-subinterpreters.patch
-ARGS="-DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_PREFIX_PATH=/usr -DWITH_PYTHON3=3.12 -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS=\"-frtti\" " ./do_cmake.sh 
+ARGS="-DCMAKE_CXX_FLAGS=\"$SLKCFLAGS -include cstdint\" -DCMAKE_C_FLAGS=\"$SLKCFLAGS -include stdint.h\" -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_PREFIX_PATH=/usr -DWITH_PYTHON3=3.12 -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS=\"-frtti\" " ./do_cmake.sh 
 cd build
 "${NINJA:=ninja}"
 DESTDIR=$PKG $NINJA install
