@@ -95,7 +95,8 @@ CXXFLAGS="$SLKCFLAGS -include cstdint -frtti" \
 ./do_cmake.sh
 
 cd build
-"${NINJA:=ninja}"
+# Extra logging for debugging
+"${NINJA:=ninja}" -k 0 2>&1 | tee /tmp/build.log
 DESTDIR=$PKG $NINJA install
 
 

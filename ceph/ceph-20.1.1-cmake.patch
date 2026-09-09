@@ -1,12 +1,11 @@
 diff -ruN ceph-20.1.1/src/rgw/CMakeLists.txt ceph-20.1.1-patched/src/rgw/CMakeLists.txt
 --- ceph-20.1.1/src/rgw/CMakeLists.txt	2025-10-02 13:29:29.000000000 -0400
-+++ ceph-20.1.1-patched/src/rgw/CMakeLists.txt	2026-09-09 17:48:41.294237824 -0400
-@@ -459,7 +459,7 @@
-   target_link_libraries(rgw_a PRIVATE OpenSSL::Crypto)
- endif()
++++ ceph-20.1.1-patched/src/rgw/CMakeLists.txt	2026-09-09 16:58:15.462598909 -0400
+@@ -560,6 +560,7 @@
+   cls_version_client cls_user_client
+   global ${LIB_RESOLV}
+   ${CURL_LIBRARIES} ${EXPAT_LIBRARIES})
++target_link_libraries(radosgw-object-expirer $<TARGET_FILE:rgw_a>)
+ install(TARGETS radosgw-object-expirer DESTINATION bin)
  
--set(rgw_libs rgw_a)
-+set(rgw_libs rgw_a $<TARGET_FILE:rgw_a>)
- 
- set(rgw_schedulers_srcs
-   rgw_dmclock_scheduler_ctx.cc
+ set(radosgw_polparser_srcs
