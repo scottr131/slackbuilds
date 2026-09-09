@@ -5,7 +5,7 @@ diff -ruN ceph-20.1.1/src/rgw/CMakeLists.txt ceph-20.1.1-patched/src/rgw/CMakeLi
  
  add_library(rgw_a STATIC
      ${rgw_a_srcs})
-+set_target_properties(rgw_a PROPERTIES LINK_INTERFACE_MULTIPLICITY 3)
++set_target_properties(rgw_a PROPERTIES LINK_INTERFACE_MULTIPLICITY 4)
  
  target_compile_definitions(rgw_a PUBLIC "-DCLS_CLIENT_HIDE_IOCTX")
  
