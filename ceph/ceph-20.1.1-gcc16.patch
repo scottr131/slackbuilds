@@ -1,0 +1,63 @@
+diff -ruN ceph-20.1.1/src/mds/Locker.cc ceph-20.1.1-patched/src/mds/Locker.cc
+--- ceph-20.1.1/src/mds/Locker.cc	2025-10-02 13:29:29.000000000 -0400
++++ ceph-20.1.1-patched/src/mds/Locker.cc	2026-09-09 13:11:13.312534425 -0400
+@@ -4489,7 +4489,7 @@
+       dout(7) << "handle_client_lease client." << client << " renew on " << *dn
+ 	      << (!dn->lock.can_lease(client)?", revoking lease":"") << dendl;
+       if (dn->lock.can_lease(client)) {
+-        auto reply = make_message<MClientLease>(*m);
++        auto reply = ceph::make_message<MClientLease>(*m);
+ 	int pool = 1;   // fixme.. do something smart!
+ 	reply->h.duration_ms = (int)(1000 * mdcache->client_lease_durations[pool]);
+ 	reply->h.seq = ++l->seq;
+diff -ruN ceph-20.1.1/src/mds/MDCache.cc ceph-20.1.1-patched/src/mds/MDCache.cc
+--- ceph-20.1.1/src/mds/MDCache.cc	2025-10-02 13:29:29.000000000 -0400
++++ ceph-20.1.1-patched/src/mds/MDCache.cc	2026-09-09 13:12:36.344213062 -0400
+@@ -10535,7 +10535,7 @@
+ 
+ 
+   CInode *cur = 0;
+-  auto reply = make_message<MDiscoverReply>(*dis);
++  auto reply = ceph::make_message<MDiscoverReply>(*dis);
+ 
+   snapid_t snapid = dis->get_snapid();
+ 
+diff -ruN ceph-20.1.1/src/mds/Server.cc ceph-20.1.1-patched/src/mds/Server.cc
+--- ceph-20.1.1/src/mds/Server.cc	2025-10-02 13:29:29.000000000 -0400
++++ ceph-20.1.1-patched/src/mds/Server.cc	2026-09-09 13:12:09.240991510 -0400
+@@ -150,7 +150,7 @@
+       }
+     }
+     batch_reqs.clear();
+-    server->reply_client_request(mdr, make_message<MClientReply>(*mdr->client_request, r));
++    server->reply_client_request(mdr, ceph::make_message<MClientReply>(*mdr->client_request, r));
+   }
+   void print(std::ostream& o) const override {
+     o << "[batch front=" << *mdr << "]";
+@@ -2142,7 +2142,7 @@
+       dout(20) << __func__ << ": batch head " << *mdr << dendl;
+       mdr->release_batch_op()->respond(r);
+     } else {
+-     reply_client_request(mdr, make_message<MClientReply>(*mdr->client_request, r));
++     reply_client_request(mdr, ceph::make_message<MClientReply>(*mdr->client_request, r));
+     }
+   } else if (mdr->internal_op > -1) {
+     dout(10) << __func__ << ": completing with result " << cpp_strerror(r) << " on internal " << *mdr << dendl;
+@@ -2290,7 +2290,7 @@
+   }
+ 
+ 
+-  auto reply = make_message<MClientReply>(*req, 0);
++  auto reply = ceph::make_message<MClientReply>(*req, 0);
+   reply->set_unsafe();
+ 
+   // mark xlocks "done", indicating that we are exposing uncommitted changes.
+@@ -2632,7 +2632,7 @@
+ 	   req->get_op() != CEPH_MDS_OP_OPEN &&
+ 	   req->get_op() != CEPH_MDS_OP_CREATE)) {
+ 	dout(5) << "already completed " << req->get_reqid() << dendl;
+-        auto reply = make_message<MClientReply>(*req, 0);
++        auto reply = ceph::make_message<MClientReply>(*req, 0);
+ 	if (created != inodeno_t()) {
+ 	  bufferlist extra;
+ 	  set_reply_extra_bl(req, created, extra);

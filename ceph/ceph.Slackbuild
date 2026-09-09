@@ -71,7 +71,7 @@ set -e # Exit on most errors
 #   command || exit 1
 # then that's also acceptable.
 
-#rm -rf $PKG
+rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $PRGNAM-$VERSION
@@ -84,7 +84,8 @@ chown -R root:root .
 # \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
 #  -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
 
-patch -p1 < $CWD/ceph-20.1.1-gcc16-subinterpreters.patch
+patch -p1 < $CWD/ceph-20.1.1-subinterpreters.patch
+patch -p1 < $CWD/ceph-20.1.1-gcc16.patch
 
 ARGS="-DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_PREFIX_PATH=/usr -DWITH_PYTHON3=3.12 -DCMAKE_BUILD_TYPE=Release" \
 CFLAGS="$SLKCFLAGS -include stdint.h" \
