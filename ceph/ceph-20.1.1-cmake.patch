@@ -1,0 +1,19 @@
+diff -ruN ceph-20.1.1/src/rgw/CMakeLists.txt ceph-20.1.1-patched/src/rgw/CMakeLists.txt
+--- ceph-20.1.1/src/rgw/CMakeLists.txt	2025-10-02 13:29:29.000000000 -0400
++++ ceph-20.1.1-patched/src/rgw/CMakeLists.txt	2026-09-09 15:44:24.040768502 -0400
+@@ -279,6 +279,7 @@
+ endif()
+ 
+ add_library(rgw_common STATIC ${librgw_common_srcs})
++target_link_libraries(rgw_common PUBLIC rgw_a)
+ 
+ include(CheckCXXCompilerFlag)
+ check_cxx_compiler_flag("-Wimplicit-const-int-float-conversion"
+@@ -426,6 +427,7 @@
+ 
+ add_library(rgw_a STATIC
+     ${rgw_a_srcs})
++target_link_libraries(rgw_common PUBLIC rgw_a)
+ 
+ target_compile_definitions(rgw_a PUBLIC "-DCLS_CLIENT_HIDE_IOCTX")
+ 
