@@ -1,11 +1,19 @@
 diff -ruN ceph-20.1.1/src/rgw/CMakeLists.txt ceph-20.1.1-patched/src/rgw/CMakeLists.txt
 --- ceph-20.1.1/src/rgw/CMakeLists.txt	2025-10-02 13:29:29.000000000 -0400
-+++ ceph-20.1.1-patched/src/rgw/CMakeLists.txt	2026-09-09 19:26:58.115728247 -0400
++++ ceph-20.1.1-patched/src/rgw/CMakeLists.txt	2026-09-09 20:15:45.102150512 -0400
 @@ -426,6 +426,7 @@
  
  add_library(rgw_a STATIC
      ${rgw_a_srcs})
-+set_target_properties(rgw_a PROPERTIES LINK_INTERFACE_MULTIPLICITY 6)
++set_target_properties(rgw_a PROPERTIES LINK_INTERFACE_MULTIPLICITY 3)
  
  target_compile_definitions(rgw_a PUBLIC "-DCLS_CLIENT_HIDE_IOCTX")
  
+@@ -560,6 +561,7 @@
+   cls_version_client cls_user_client
+   global ${LIB_RESOLV}
+   ${CURL_LIBRARIES} ${EXPAT_LIBRARIES})
++target_link_libraries(radosgw-object-expirer -Wl,--whole-archive $<TARGET_FILE:rgw_a> -Wl,--no-whole-archive)
+ install(TARGETS radosgw-object-expirer DESTINATION bin)
+ 
+ set(radosgw_polparser_srcs
