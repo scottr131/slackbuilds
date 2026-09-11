@@ -2,7 +2,7 @@
 
 # Slackware build script for open-iscsi
 
-# Copyright 2025
+# Copyright 2026
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -25,7 +25,7 @@
 cd $(dirname $0) ; CWD=$(pwd)
 
 PRGNAM=open-iscsi
-VERSION=2.1.11
+VERSION=2.1.13
 BUILD=1
 TAG=${TAG:-_SBo}		# the "_SBo" is required
 PKGTYPE=${PKGTYPE:-tgz}
