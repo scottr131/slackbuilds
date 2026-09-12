@@ -88,7 +88,6 @@ CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
 make everything -j ${BLDTHREADS:-1}
 make bin-x86_64-efi/snponly.efi -j ${BLDTHREADS:-1}
-make bin-i386-efi/snponly.efi -j ${BLDTHREADS:-1}
 
 # Copy the binaries
 mkdir -p $PKG/usr/share/$PRGNAM
