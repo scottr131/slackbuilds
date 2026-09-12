@@ -46,6 +46,17 @@ pipeline {
                 }
             }
         }     
+        
+        stage('Build ipxe') {
+            steps {
+                sh 'make ipxe'
+            }
+            post {
+                success {
+                    archiveArtifacts(artifacts: '*.txz', followSymlinks: false)
+                }
+            }
+        }             
 
 /*
         stage('Build rundeck') {
