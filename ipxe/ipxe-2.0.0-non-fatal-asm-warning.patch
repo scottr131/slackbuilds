@@ -1,0 +1,12 @@
+diff -ruN ipxe-2.0.0/src/Makefile.housekeeping ipxe-2.0.0-patch/src/Makefile.housekeeping
+--- ipxe-2.0.0/src/Makefile.housekeeping	2026-03-06 10:48:55.000000000 -0500
++++ ipxe-2.0.0-patch/src/Makefile.housekeeping	2026-09-12 17:45:56.564039874 -0400
+@@ -503,7 +503,7 @@
+ #
+ ifneq ($(NO_WERROR),1)
+ CFLAGS		+= -Werror
+-ASFLAGS		+= --fatal-warnings
++#ASFLAGS		+= --fatal-warnings
+ HOST_CFLAGS	+= -Werror
+ endif
+ 
