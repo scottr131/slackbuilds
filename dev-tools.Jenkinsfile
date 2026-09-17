@@ -26,16 +26,6 @@ pipeline {
         }        
 
 
-        stage('Build temurin-jdk17') {
-            steps {
-                sh 'make temurin-jdk17'
-            }
-            post {
-                success {
-                    archiveArtifacts(artifacts: '*.txz', followSymlinks: false)
-                }
-            }
-        }     
 
         stage('Build temurin-jdk21') {
             steps {
@@ -47,7 +37,7 @@ pipeline {
                 }
             }
         }     
-
+/*
         stage('Build temurin-jdk25') {
             steps {
                 sh 'make temurin-jdk25'
@@ -58,7 +48,7 @@ pipeline {
                 }
             }
         }     
-
+*/
 
      }
 }
