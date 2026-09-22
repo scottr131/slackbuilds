@@ -95,6 +95,7 @@ cmake . \
   -DMAN_INSTALL_DIR=/usr/man \
   -DCMAKE_PREFIX_PATH=/usr \
   -DCMAKE_SHARED_LIBRARY_PREFIX=/usr/lib64 \
+  -DGGML_VULKAN=ON \
   -DCMAKE_BUILD_TYPE=Release 
 cmake --build build/ --config Release -j --clean-first
 #make install DESTDIR=$PKG
