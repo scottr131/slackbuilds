@@ -27,7 +27,7 @@ TARGETS     := \
 	open-isns open-iscsi truenas_incus_ctl vm-curator \
 	cloud-init lazygit beszel-agent moosefs restic iperf \
 	llama.cpp go-md2man conmon netavark podman \
-	thin-send-recv
+	thin-send-recv llama.cpp-release
 
 BZ2TARGETS     := \
 	libblkio
