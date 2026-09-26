@@ -2,7 +2,7 @@
 
 # Slackware build script for libwebsockets
 
-# Copyright 2025 insane131 
+# Copyright 2026
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -25,7 +25,7 @@
 cd $(dirname $0) ; CWD=$(pwd)
 
 PRGNAM=libwebsockets
-VERSION=4.5.2
+VERSION=4.5.8
 BUILD=1
 TAG=${TAG:-_SBo}		# the "_SBo" is required
 PKGTYPE=${PKGTYPE:-tgz}
@@ -87,7 +87,8 @@ chown -R root:root .
 mkdir -p build
 cd build
 cmake \
-  -DCMAKE_C_FLAGS:STRING="$SLKCFLAGS" \
+  -DCMAKE_C_FLAGS:STRING="$SLKCFLAGS -std=gnu17" \
+  -DLWS_WITH_MINIMAL_EXAMPLES=OFF \
   -DCMAKE_CXX_FLAGS:STRING="$SLKCFLAGS" \
   -DCMAKE_INSTALL_PREFIX=/usr \
   -DLIB_SUFFIX=${LIBDIRSUFFIX} \
