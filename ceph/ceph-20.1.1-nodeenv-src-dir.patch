@@ -1,0 +1,12 @@
+diff -ruN ceph-20.1.1/src/pybind/mgr/dashboard/frontend/CMakeLists.txt ceph-20.1.1-patched/src/pybind/mgr/dashboard/frontend/CMakeLists.txt
+--- ceph-20.1.1/src/pybind/mgr/dashboard/frontend/CMakeLists.txt	2025-10-02 13:29:29.000000000 -0400
++++ ceph-20.1.1-patched/src/pybind/mgr/dashboard/frontend/CMakeLists.txt	2026-09-30 15:50:16.283336815 -0400
+@@ -74,7 +74,7 @@
+     # the current user. This can be an issue due to the node tarball using
+     # uid 1000 and running the unpack in a id-mapped namespace (container)
+     # that lets tar set the uid to a "bad" uid outside the namespace
+-    COMMAND bash -c 'chown -R `id -u`:`id -g` ${mgr-dashboard-nodeenv-dir}/src'
++    COMMAND bash -c 'mkdir -p ${mgr-dashboard-nodeenv-dir}/src && chown -R `id -u`:`id -g` ${mgr-dashboard-nodeenv-dir}/src'
+     COMMAND mkdir -p ${npm-cache-dir}
+     WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
+     COMMENT "dashboard nodeenv is being installed")
