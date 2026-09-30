@@ -1,0 +1,11 @@
+apache-tomcat: apache-tomcat (an open implementation of a servlet container)
+apache-tomcat:
+apache-tomcat: The Apache Tomcat® software is an open source implementation of the
+apache-tomcat: Java Servlet, JavaServer Pages, Java Expression Language and Java
+apache-tomcat: WebSocket technologies. The Java Servlet, JavaServer Pages, Java
+apache-tomcat: Expression Language and Java WebSocket specifications are developed
+apache-tomcat: under the [Java Community Process]
+apache-tomcat: (https://jcp.org/en/introduction/overview).
+apache-tomcat:
+apache-tomcat: This is a repackaging of the official Apache Linux binaries in a
+apache-tomcat: Slackware package.
