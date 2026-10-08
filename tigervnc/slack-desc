@@ -1,0 +1,10 @@
+tigervnc: tigervnc (a high-speed version of VNC)
+tigervnc:
+tigervnc: Virtual Network Computing (VNC) is a remote display system which 
+tigervnc: allows you toview and interact with a virtual desktop environment
+tigervnc: that is running on another computer on the network. 
+tigervnc:
+tigervnc: TigerVNC is a high-speed version of VNC based on the RealVNC 4 and
+tigervnc: X.org code bases. TigerVNC supports a variant of Tight encoding
+tigervnc: that is greatly accelerated by the use of the libjpeg-turbo JPEG 
+tigervnc: codec.
