@@ -5,23 +5,16 @@ These are slackbuild files for various programs on Slackware.  These should prod
 #### Management Tools Stack
 - ansible
 - glances
-- rundeck (deprecated from stack)
 - opentofu
 
 #### Utilities Stack
 - asciinema
 - bash-completion
 - bat
-- btop
 - fresh
-- ufw
-- vtm
 
 #### Developement Stack
-- temurin-jdk11
-- temurin-jdk17
 - temurin-jdk21
-- temurin-jdk25
 
 #### Kubernetes Stack
 - containerd
