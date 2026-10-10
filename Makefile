@@ -28,7 +28,7 @@ TARGETS     := \
 	cloud-init lazygit beszel-agent moosefs restic iperf \
 	llama.cpp go-md2man conmon netavark podman \
 	thin-send-recv llama.cpp-prerelease apache-tomcat9 \
-	tigervnc
+	tigervnc virt-viewer
 
 BZ2TARGETS     := \
 	libblkio
