@@ -1,0 +1,11 @@
+virt-viewer: virt-viewer (a graphical viewer for the guest OS display)
+virt-viewer:
+virt-viewer: Virt Viewer provides a graphical viewer for the guest OS
+virt-viewer: display. At this time is supports guest OS using the VNC
+virt-viewer: or SPICE protocols. Further protocols may be supported in
+virt-viewer: the future as user demand dictates. The viewer can connect
+virt-viewer: directly to both local and remotely hosted guest OS, optionally
+virt-viewer: using SSL/TLS encryption.
+virt-viewer:
+virt-viewer:
+virt-viewer:

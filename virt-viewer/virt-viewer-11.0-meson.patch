@@ -1,0 +1,27 @@
+diff -ruN virt-viewer-11.0/data/meson.build virt-viewer-11.0-patched/data/meson.build
+--- virt-viewer-11.0/data/meson.build	2021-11-18 14:24:49.126912000 -0500
++++ virt-viewer-11.0-patched/data/meson.build	2026-10-10 14:29:56.613618905 -0400
+@@ -2,7 +2,6 @@
+   desktop = 'remote-viewer.desktop'
+ 
+   i18n.merge_file (
+-    desktop,
+     type: 'desktop',
+     input: desktop + '.in',
+     output: desktop,
+@@ -14,7 +13,6 @@
+   mimetypes = 'virt-viewer-mime.xml'
+ 
+   i18n.merge_file (
+-    mimetypes,
+     type: 'xml',
+     input: mimetypes + '.in',
+     output: mimetypes,
+@@ -27,7 +25,6 @@
+   metainfo = 'remote-viewer.appdata.xml'
+ 
+   i18n.merge_file (
+-    metainfo,
+     type: 'xml',
+     input: metainfo + '.in',
+     output: metainfo,
