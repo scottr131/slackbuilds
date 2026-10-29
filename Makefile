@@ -7,7 +7,7 @@ BLDTHREADS  ?= $(shell nproc)
 TARGETS     := \
 	usbredir spice-protocol spice numactl qemu \
 	libosinfo osinfo-db-tools libvirt libvirt-glib \
-	libvirt_python virt-manager spice-gtk gtk-vnc \
+	libvirt_python spice-gtk gtk-vnc \
 	jq rdma-core bcrypt-subint cryptography-subint \
 	libnbd googletest oath-toolkit lttng-ust babeltrace \
 	thrift incus go linstor-server python_linstor \
@@ -30,11 +30,15 @@ TARGETS     := \
 	thin-send-recv llama.cpp-prerelease apache-tomcat9 \
 	tigervnc virt-viewer
 
+XZTARGETS      := \
+	virt-manager
+
+
 BZ2TARGETS     := \
 	libblkio
 
 # ====== Phony Targets ======
-.PHONY: all clean $(TARGETS) $(BZ2TARGETS) \
+.PHONY: all clean $(TARGETS) $(BZ2TARGETS) $(XZTARGETS) \
 	cloud-init
 
 # Default: build everything
@@ -66,6 +70,25 @@ $(BZ2TARGETS):
 	cd $@; \
 	. ./$@.info; \
 	FILE=$$(basename "$${DOWNLOAD_x86_64}"); EXPECTED="$${PRGNAM}-$${VERSION}.tar.bz2"; \
+	if [ ! -f "$$EXPECTED" ]; then \
+  		echo "==> Downloading $$FILE from $${DOWNLOAD_x86_64}"; \
+  		curl -L -o "$$FILE" "$${DOWNLOAD_x86_64}"; \
+		if [ "$$FILE" != "$$EXPECTED" ]; then \
+    		    echo "==> Renaming $$FILE to $$EXPECTED"; \
+		    mv "$$FILE" "$$EXPECTED"; \
+		fi; \
+	else \
+  		echo "==> Source archive already exists: $$FILE"; \
+	fi; \
+	chmod +x ./$@.Slackbuild; \
+	sudo JAVA_HOME="$(JAVA_HOME)" PATH="$(PATH)" OUTPUT="$(OUTPUT)" PKGTYPE="$(PKGTYPE)" BLDTHREADS="$(BLDTHREADS)" ./$@.Slackbuild "$(EXTRA_ARGS)"
+
+$(XZTARGETS):
+	@echo "==> Building $@"
+	@set -e; \
+	cd $@; \
+	. ./$@.info; \
+	FILE=$$(basename "$${DOWNLOAD_x86_64}"); EXPECTED="$${PRGNAM}-$${VERSION}.tar.xz"; \
 	if [ ! -f "$$EXPECTED" ]; then \
   		echo "==> Downloading $$FILE from $${DOWNLOAD_x86_64}"; \
   		curl -L -o "$$FILE" "$${DOWNLOAD_x86_64}"; \
