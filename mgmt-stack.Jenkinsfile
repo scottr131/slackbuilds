@@ -36,17 +36,6 @@ pipeline {
             }
         }     
 
-        stage('Build beszel-agent') {
-            steps {
-                sh 'PATH=/opt/go/bin:$PATH make beszel-agent'
-            }
-            post {
-                success {
-                    archiveArtifacts(artifacts: '*.txz', followSymlinks: false)
-                }
-            }
-        }     
-        
         stage('Build ipxe') {
             steps {
                 sh 'make ipxe'
@@ -58,18 +47,6 @@ pipeline {
             }
         }             
 
-/*
-        stage('Build rundeck') {
-            steps {
-                sh 'make rundeck'
-            }
-            post {
-                success {
-                    archiveArtifacts(artifacts: '*.txz', followSymlinks: false)
-                }
-            }
-        }     
-*/
       
         stage('Build opentofu') {
             steps {

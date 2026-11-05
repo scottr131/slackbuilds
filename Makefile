@@ -104,3 +104,4 @@ $(XZTARGETS):
 
 lang-stack: temurin-jdk17 temurin-jdk21 temurin-jdk25 go
 utils-stack: asciinema bash-completion bat fresh iperf
+mgmt-stack: ansible glances opentofu ipxe
