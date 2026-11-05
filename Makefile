@@ -103,3 +103,4 @@ $(XZTARGETS):
 	sudo JAVA_HOME="$(JAVA_HOME)" PATH="$(PATH)" OUTPUT="$(OUTPUT)" PKGTYPE="$(PKGTYPE)" BLDTHREADS="$(BLDTHREADS)" ./$@.Slackbuild "$(EXTRA_ARGS)"
 
 lang-stack: temurin-jdk17 temurin-jdk21 temurin-jdk25 go
+utils-stack: asciinema bash-completion bat fresh iperf

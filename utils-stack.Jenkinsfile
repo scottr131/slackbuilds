@@ -69,6 +69,28 @@ pipeline {
                 }
             }
         }     
+
+        stage('Build iperf') {
+            steps {
+                sh 'make iperf'
+            }
+            post {
+                success {
+                    archiveArtifacts(artifacts: '*.txz', followSymlinks: false)
+                }
+            }
+        }     
+
+        stage('Build restic') {
+            steps {
+                sh 'make restic'
+            }
+            post {
+                success {
+                    archiveArtifacts(artifacts: '*.txz', followSymlinks: false)
+                }
+            }
+        }
 /*        
         stage('Build ufw') {
             steps {
