@@ -25,7 +25,7 @@
 cd $(dirname $0) ; CWD=$(pwd)
 
 PRGNAM=libwebsockets
-VERSION=4.5.8
+VERSION=5.1.0
 BUILD=1
 TAG=${TAG:-_SBo}		# the "_SBo" is required
 PKGTYPE=${PKGTYPE:-tgz}
@@ -89,6 +89,10 @@ cd build
 cmake \
   -DCMAKE_C_FLAGS:STRING="$SLKCFLAGS -std=gnu17" \
   -DLWS_WITH_MINIMAL_EXAMPLES=OFF \
+  -DLWS_WITH_SSL=ON \
+  -DLWS_WITH_HTTP3=OFF \
+  -DLWS_ROLE_QUIC=OFF \
+  -DLWS_WITH_GNUTLS=OFF \
   -DCMAKE_CXX_FLAGS:STRING="$SLKCFLAGS" \
   -DCMAKE_INSTALL_PREFIX=/usr \
   -DLIB_SUFFIX=${LIBDIRSUFFIX} \
