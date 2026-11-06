@@ -1,0 +1,11 @@
+guacamole-server: guacamole-server (the basis of the Guacamole stack)
+guacamole-server:
+guacamole-server: Apache Guacamole is a clientless remote desktop gateway. It supports 
+guacamole-server: standard protocols like VNC, RDP, and SSH. We call it clientless 
+guacamole-server: because no plugins or client software are required. Thanks to HTML5,
+guacamole-server: once Guacamole is installed on a server, all you need to access your
+guacamole-server: desktops is a web browser.
+guacamole-server:
+guacamole-server: The guacamole-server package is a set of software which forms the 
+guacamole-server: basis of the Guacamole stack. It consists of guacd, libguac, and
+guacamole-server: several protocol support libraries.

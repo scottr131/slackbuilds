@@ -28,7 +28,7 @@ TARGETS     := \
 	cloud-init lazygit beszel-agent moosefs restic iperf \
 	llama.cpp go-md2man conmon netavark podman \
 	thin-send-recv llama.cpp-prerelease apache-tomcat9 \
-	tigervnc virt-viewer
+	tigervnc virt-viewer libyang guacamole-server
 
 XZTARGETS      := \
 	virt-manager
@@ -103,5 +103,13 @@ $(XZTARGETS):
 	sudo JAVA_HOME="$(JAVA_HOME)" PATH="$(PATH)" OUTPUT="$(OUTPUT)" PKGTYPE="$(PKGTYPE)" BLDTHREADS="$(BLDTHREADS)" ./$@.Slackbuild "$(EXTRA_ARGS)"
 
 lang-stack: temurin-jdk17 temurin-jdk21 temurin-jdk25 go
-utils-stack: asciinema bash-completion bat fresh iperf
+
+utils-stack: asciinema bash-completion bat fresh iperf restic
+
 mgmt-stack: ansible glances opentofu ipxe
+
+storage-stack: linstor-server python_linstor linstor_client drbd drbd-utils zfs
+
+podman-stack: libpathrs runc go-md2man conmon netavark podman buildah skopeo
+
+ovn-stack: openvswitch ovn
