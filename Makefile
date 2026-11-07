@@ -28,7 +28,9 @@ TARGETS     := \
 	cloud-init lazygit beszel-agent moosefs restic iperf \
 	llama.cpp go-md2man conmon netavark podman \
 	thin-send-recv llama.cpp-prerelease apache-tomcat9 \
-	tigervnc virt-viewer libyang guacamole-server
+	tigervnc virt-viewer libyang guacamole-server fio
+
+INSTALLS     := $(foreach tgt,$(TARGETS),$(eval $(tgt)-install: $(pkg)))
 
 XZTARGETS      := \
 	virt-manager
@@ -39,7 +41,12 @@ BZ2TARGETS     := \
 
 # ====== Phony Targets ======
 .PHONY: all clean $(TARGETS) $(BZ2TARGETS) $(XZTARGETS) \
-	cloud-init
+	$(INSTALLS) \
+	cloud-init lang-stack lang-stack-p1 storage-stack \
+	storage-stack-p1 incus-stack incus-stack-p1 \
+	incus-stack-p2 qemu-stack qemu-stack-p1 \
+	kubernetes-stack guacamole-stack podman-stack \
+	ovn-stack xrdp-stack podman-stack
 
 # Default: build everything
 all: $(TARGETS)
@@ -102,14 +109,60 @@ $(XZTARGETS):
 	chmod +x ./$@.Slackbuild; \
 	sudo JAVA_HOME="$(JAVA_HOME)" PATH="$(PATH)" OUTPUT="$(OUTPUT)" PKGTYPE="$(PKGTYPE)" BLDTHREADS="$(BLDTHREADS)" ./$@.Slackbuild "$(EXTRA_ARGS)"
 
-lang-stack: temurin-jdk17 temurin-jdk21 temurin-jdk25 go
+lang-stack: lang-stack-p1
+	@echo "Installing go, temurin-jdk21"
+	@set -e; \
+	sudo installpkg "$$OUTPUT/go-*.txz"; \
+	sudo installpkg "$$OUTPUT/temurin-jdk21*.txz"
 
-utils-stack: asciinema bash-completion bat fresh iperf restic
+lang-stack-p1: temurin-jdk17 temurin-jdk21 temurin-jdk25 go
+
+utils-stack: asciinema bash-completion bat fresh iperf restic fio
 
 mgmt-stack: ansible glances opentofu ipxe
 
-storage-stack: linstor-server python_linstor linstor_client drbd drbd-utils zfs
+storage-stack: linstor-server storage-stack-p1 linstor_client drbd drbd-utils zfs
 
-podman-stack: libpathrs runc go-md2man conmon netavark podman buildah skopeo
+storage-stack-p1: python_linstor
+	@echo "Installing python_linstor"
+	@set -e; \
+	sudo installpkg "$$OUTPUT/python_linstor-*.txz"
+
 
 ovn-stack: openvswitch ovn
+
+incus-stack: incus-stack-p1 cowsql incus-stack-p2 incus incus-ui-canonical skopeo virt-viewer
+
+incus-stack-p1: raft
+	@echo "Installing raft"
+	@set -e; \
+	sudo installpkg "$$OUTPUT/raft-*.txz"
+
+incus-stack-p2: cowsql
+	@echo "Installing cowsql"
+	@set -e; \
+	sudo installpkg "$$OUTPUT/cowsql-*.txz"
+
+qemu-stack: qemu-stack-p1 qemu
+
+qemu-stack-p1: libblkio libiscsi numactl 
+	@echo "Installing libblkio, libiscsi, numactl"
+	@set -e; \
+	sudo installpkg "$$OUTPUT/libblkio-*.txz"; \
+	sudo installpkg "$$OUTPUT/libiscsi-*.txz"; \
+	sudo installpkg "$$OUTPUT/numactl-*.txz"
+
+podman-stack: libpathrs-install runc go-md2man-install conmon netavark podman buildah skopeo
+
+kubernetes-stack: containerd cri-tools cni-plugins libpathrs-install runc kubernetes nerdctl
+
+libvirt-stack: spice-gtk-install gtk-vnc-install libosinfo-install osinfo-db-tools libvirt-install libvirt-glib-install libvirt_python-install virt-manager
+
+guacamole-stack: apache-tomcat9 libtelnet-install libwebsockets-install guacamole-server
+
+xrdp-stack: xrdp-install xorgxrdp
+
+%-install: %
+	@echo "Installing package $*"
+	@set -e; \
+	sudo installpkg "$$OUTPUT/$*-*.txz"
